@@ -43,7 +43,7 @@
 
 این پروژه بر اساس نسخه V8 ابزار عالی **IR NETLIFY CONFIG GENERATOR** ساخته شده است.
 
-با تشکر فراوان از [@IR_NETLIFY](https://t.me/IR_NETLIFY) بابت پروژه اصلی و الهام‌بخش:  
+با تشکر فراوان از پروژه اصلی:  
 **https://ir-netlify.github.io/NETLIFY**
 
 ---
@@ -56,22 +56,15 @@
 
 ---
 
-## 📸 پیش‌نمایش
-
-![IR NETLIFY V9](https://raw.githubusercontent.com/johncarterjourney-rgb/netlify-config-generator/main/preview.png)
-
----
-
 ## 📝 لایسنس
 
 لایسنس MIT — رایگان برای استفاده و تغییر
 
 ---
 
-## 💬 اعتبار
+## 💬 ارتباط با ما
 
-ساخته شده با ❤️ توسط جامعه IR Netlify  
-گیت‌هاب: [@IR_NETLIFY](https://t.me/IR_NETLIFY)
+کانال تلگرام: **[@ArchiveTell](https://t.me/ArchiveTell)**
 
 ---
 
