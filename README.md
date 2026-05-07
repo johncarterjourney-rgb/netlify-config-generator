@@ -25,7 +25,7 @@
 ## 🚀 دمو زنده
 
 **همین الان امتحان کنید:**  
-[https://YOUR-USERNAME.github.io/netlify-config-generator/](https://YOUR-USERNAME.github.io/netlify-config-generator/)
+[https://johncarterjourney-rgb.github.io/netlify-config-generator/](https://johncarterjourney-rgb.github.io/netlify-config-generator/)
 
 ---
 
@@ -41,7 +41,10 @@
 
 ## 🙏 تشکر ویژه
 
-از [@IR_NETLIFY](https://t.me/IR_NETLIFY) بابت نسخه‌های قبلی این ابزار (V8) که پایه و الهام‌بخش این پروژه بوده، صمیمانه تشکر می‌کنیم.
+این پروژه بر اساس نسخه V8 ابزار عالی **IR NETLIFY CONFIG GENERATOR** ساخته شده است.
+
+با تشکر فراوان از [@IR_NETLIFY](https://t.me/IR_NETLIFY) بابت پروژه اصلی و الهام‌بخش:  
+**https://ir-netlify.github.io/NETLIFY**
 
 ---
 
@@ -55,7 +58,7 @@
 
 ## 📸 پیش‌نمایش
 
-![IR NETLIFY V9](https://raw.githubusercontent.com/YOUR-USERNAME/netlify-config-generator/main/preview.png)
+![IR NETLIFY V9](https://raw.githubusercontent.com/johncarterjourney-rgb/netlify-config-generator/main/preview.png)
 
 ---
 
