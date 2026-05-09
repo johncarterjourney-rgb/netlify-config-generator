@@ -1,4 +1,6 @@
-# IR NETLIFY V10 • GROK EDITION ⚡️
+# netlify-config-generator
+
+**IR NETLIFY V10 • GROK EDITION ⚡️**
 
 **ابزار سبک، مینیمال و سیاه‌وسفید تولید کانفیگ VLESS** — با طراحی الهام‌گرفته از Grok.
 
@@ -35,7 +37,7 @@
 
 ## 🚀 نحوه استفاده / How to Use
 
-1. فایل `ir-netlify-v10-grok-theme.html` را دانلود کنید
+1. فایل `index.html` را دانلود کنید (یا مستقیم از دمو آنلاین استفاده کنید)
 2. آن را در هر مرورگر مدرنی باز کنید (کروم، فایرفاکس، اج و ...)
 3. **دامنه نتلیفای** خود را وارد کنید
 4. یکی از دکمه‌های دسته‌بندی یا **ALL** را بزنید تا دامنه‌های SNI لود شوند
@@ -48,8 +50,8 @@
 ## 📁 ساختار پروژه / Project Structure
 
 ```
-ir-netlify-v10-grok-theme.html   ← ابزار اصلی (فایل تک‌صفحه‌ای)
-README.md                        ← این فایل
+index.html   ← ابزار اصلی (دمو آنلاین آماده)
+README.md    ← این فایل
 ```
 
 ---
@@ -70,6 +72,12 @@ README.md                        ← این فایل
 - کنتراست بالا
 - ظاهر حرفه‌ای
 - سریع و سبک
+
+### دمو آنلاین / Live Demo
+
+🔗 **[مشاهده دمو آنلاین](https://johncarterjourney-rgb.github.io/netlify-config-generator/)**
+
+(با GitHub Pages میزبانی می‌شود)
 
 ---
 
