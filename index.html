@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IR NETLIFY V10 • GROK EDITION</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=450" />
+    <title>IR NETLIFY V10 • BACHELOR EDITION ⚡️</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap');
         
         :root {
             --bg: #0a0a0a;
@@ -14,7 +15,6 @@
             --text: #f5f5f5;
             --text-dim: #aaaaaa;
             --accent: #ffffff;
-            --accent-dim: #e0e0e0;
         }
         
         * { margin:0; padding:0; box-sizing:border-box; }
@@ -28,7 +28,7 @@
         }
         
         .container {
-            max-width: 560px;
+            max-width: 520px;
             margin: 0 auto;
             background: var(--surface);
             border: 1px solid var(--border);
@@ -39,30 +39,28 @@
         
         .header {
             text-align: center;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
         
         .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.1rem;
-            font-weight: 700;
+            font-size: 1.8rem;
+            font-weight: 800;
             color: var(--text);
-            letter-spacing: -1.5px;
+            letter-spacing: -1px;
         }
         
         .version {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             background: #ffffff;
-            color: #000000;
-            padding: 1px 9px;
+            color: #000;
+            padding: 1px 8px;
             border-radius: 999px;
             font-weight: 800;
-            margin-left: 6px;
         }
         
         .tabs {
             display: flex;
-            background: #111111;
+            background: #111;
             border-radius: 9999px;
             padding: 4px;
             margin: 20px 0;
@@ -76,89 +74,44 @@
             background: transparent;
             color: var(--text-dim);
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             border-radius: 9999px;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
         }
         
         .tab-btn.active {
             background: #ffffff;
-            color: #000000;
+            color: #000;
             font-weight: 700;
         }
         
         .section {
-            margin-bottom: 22px;
+            margin-bottom: 18px;
         }
         
         .section-title {
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             color: var(--text-dim);
             font-weight: 700;
-            letter-spacing: 1px;
             margin-bottom: 8px;
         }
         
         .input {
             width: 100%;
-            padding: 14px 16px;
-            background: #111111;
+            padding: 13px 16px;
+            background: #111;
             border: 1px solid var(--border);
-            border-radius: 16px;
+            border-radius: 14px;
             color: var(--text);
-            font-size: 1rem;
-            margin-bottom: 12px;
-        }
-        
-        .input:focus {
-            border-color: #666666;
-            outline: none;
-        }
-        
-        .sni-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-        
-        .category-btn {
-            padding: 11px 8px;
-            font-size: 0.75rem;
-            background: #1f1f1f;
-            border: 1px solid var(--border);
-            color: var(--text-dim);
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-align: center;
-            line-height: 1.35;
-        }
-        
-        .category-btn:hover {
-            border-color: #666666;
-            color: var(--text);
-        }
-        
-        .category-btn.all {
-            background: #ffffff;
-            color: #000000;
-            font-weight: 700;
-            border: none;
-        }
-        
-        .category-btn.active {
-            background: #ffffff;
-            color: #000000;
-            border-color: #ffffff;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
         }
         
         .btn {
-            flex: 1;
-            padding: 13px 18px;
-            border-radius: 16px;
+            padding: 12px 18px;
+            border-radius: 14px;
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.3s;
             border: none;
@@ -166,137 +119,120 @@
         
         .btn-primary {
             background: #ffffff;
-            color: #000000;
+            color: #000;
         }
         
         .btn-secondary {
             background: transparent;
-            border: 2px solid #666666;
+            border: 2px solid #666;
             color: var(--text-dim);
         }
         
+        .category-btn {
+            padding: 9px 10px;
+            font-size: 0.72rem;
+            background: #1f1f1f;
+            border: 1px solid var(--border);
+            color: var(--text-dim);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+        
+        .category-btn.all {
+            background: #ffffff;
+            color: #000;
+            font-weight: 700;
+            border: none;
+        }
+        
+        .category-btn.active {
+            background: #ffffff;
+            color: #000;
+            border-color: #ffffff;
+        }
+        
         .output {
-            margin-top: 24px;
+            margin-top: 20px;
             display: none;
         }
         
         #result-area {
             width: 100%;
-            min-height: 280px;
-            background: #111111;
+            min-height: 260px;
+            background: #111;
             border: 2px solid var(--border);
-            border-radius: 18px;
-            padding: 16px;
+            border-radius: 16px;
+            padding: 14px;
             color: #00ff9d;
             font-family: monospace;
-            font-size: 0.92rem;
-            line-height: 1.45;
+            font-size: 0.88rem;
+            line-height: 1.4;
             resize: vertical;
         }
         
         .stats-bar {
-            background: #111111;
-            padding: 10px 16px;
-            border-radius: 14px;
+            background: #111;
+            padding: 9px 14px;
+            border-radius: 12px;
             display: flex;
             justify-content: space-between;
-            font-size: 0.85rem;
-            margin: 14px 0;
+            font-size: 0.82rem;
+            margin: 12px 0;
             border: 1px solid var(--border);
         }
         
         .toast {
             position: fixed;
-            bottom: 24px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
-            background: #222222;
-            color: #ffffff;
-            padding: 14px 28px;
+            background: #222;
+            color: #fff;
+            padding: 12px 26px;
             border-radius: 9999px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            box-shadow: 0 0 25px rgba(0,0,0,0.5);
             display: none;
             z-index: 9999;
             font-weight: 600;
-        }
-        
-        .tab-panel { display: none; }
-        .tab-panel.active { display: block; }
-        
-        .preset-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px;
-            margin-bottom: 16px;
-        }
-        
-        .preset-btn {
-            padding: 10px 12px;
-            background: #1f1f1f;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            font-size: 0.82rem;
-            color: var(--text-dim);
-            cursor: pointer;
-            text-align: left;
-        }
-        
-        .preset-btn:hover {
-            border-color: #666666;
-            color: var(--text);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- HEADER -->
         <div class="header">
             <div class="logo">IR NETLIFY <span class="version">V10</span></div>
-            <div style="color:#888; font-size:0.85rem; margin-top:4px;">GROK EDITION • BLACK &amp; WHITE</div>
+            <div style="color:#888; font-size:0.8rem; margin-top:4px;">BACHELOR EDITION • BLACK &amp; WHITE</div>
         </div>
         
-        <!-- MAIN TABS -->
         <div class="tabs">
-            <button onclick="switchMainTab(0)" class="tab-btn active" id="tab0">⚡ Generator</button>
-            <button onclick="switchMainTab(1)" class="tab-btn" id="tab1">✎ Renamer</button>
-            <button onclick="switchMainTab(2)" class="tab-btn" id="tab2">🛠 Tools</button>
+            <button onclick="switchTab(0)" class="tab-btn active" id="tab0">⚡ Netlify</button>
+            <button onclick="switchTab(1)" class="tab-btn" id="tab1">✎ Tools</button>
         </div>
         
-        <!-- GENERATOR TAB -->
-        <div id="panel-generator" class="tab-panel active">
-            
+        <!-- NETLIFY TAB -->
+        <div id="panel-netlify">
             <div class="section">
                 <div class="section-title">MODE</div>
-                <div style="display:flex; gap:8px; margin-bottom:16px;">
-                    <button onclick="setNetlifyMode('shecan')" id="mode-shecan" class="btn btn-primary" style="flex:1; padding:12px 0; font-size:0.9rem;">IP + SNI (Shecan)</button>
-                    <button onclick="setNetlifyMode('normal')" id="mode-normal" class="btn btn-secondary" style="flex:1; padding:12px 0; font-size:0.9rem;">Direct SNI</button>
+                <div style="display:flex; gap:8px; margin-bottom:14px;">
+                    <button onclick="setNetlifyMode('shecan')" id="mode-shecan" class="btn btn-primary" style="flex:1; padding:11px 0; font-size:0.88rem;">IP + SNI (Shecan)</button>
+                    <button onclick="setNetlifyMode('normal')" id="mode-normal" class="btn btn-secondary" style="flex:1; padding:11px 0; font-size:0.88rem;">Direct SNI</button>
                 </div>
             </div>
             
             <div class="section">
                 <div class="section-title">SERVER TYPE</div>
-                <div style="display:flex; gap:8px; margin-bottom:16px;">
-                    <button onclick="setConfigMode('default')" id="type-default" class="btn btn-secondary" style="flex:1; padding:10px 0; font-size:0.85rem;">Parsa Server</button>
-                    <button onclick="setConfigMode('custom')" id="type-custom" class="btn btn-secondary" style="flex:1; padding:10px 0; font-size:0.85rem;">Custom Server</button>
+                <div style="display:flex; gap:8px; margin-bottom:14px;">
+                    <button onclick="setConfigMode('default')" id="type-default" class="btn btn-secondary" style="flex:1; padding:10px 0; font-size:0.82rem;">Parsa / Xarheon Server</button>
+                    <button onclick="setConfigMode('custom')" id="type-custom" class="btn btn-secondary" style="flex:1; padding:10px 0; font-size:0.82rem;">Custom Server</button>
                 </div>
             </div>
             
-            <div id="custom-settings" style="display:none; background:#1a1a1a; border:1px dashed #555555; padding:16px; border-radius:16px; margin-bottom:20px;">
-                <div class="section-title" style="color:#cccccc;">CUSTOM PARAMETERS</div>
+            <div id="custom-settings" style="display:none; background:#1a1a1a; border:1px dashed #555; padding:14px; border-radius:14px; margin-bottom:16px;">
+                <div class="section-title" style="color:#ccc;">CUSTOM PARAMETERS</div>
                 <input id="custom-user" class="input" placeholder="Custom UUID">
                 <input id="custom-path" class="input" placeholder="Custom Path (e.g. /p4r34m)">
-                <div style="display:flex; gap:10px; margin-top:8px;">
-                    <select id="fingerprint" class="input" style="flex:1; padding:12px;">
-                        <option value="chrome">Fingerprint: Chrome</option>
-                        <option value="firefox">Fingerprint: Firefox</option>
-                        <option value="safari">Fingerprint: Safari</option>
-                        <option value="random">Random</option>
-                    </select>
-                    <select id="alpn" class="input" style="flex:1; padding:12px;">
-                        <option value="h2,http/1.1">ALPN: h2 + http/1.1</option>
-                        <option value="h2">ALPN: h2 only</option>
-                    </select>
-                </div>
             </div>
             
             <div class="section">
@@ -304,36 +240,35 @@
                 <input id="main-host" class="input" placeholder="your-project.netlify.app" value="example.netlify.app">
             </div>
             
-            <!-- CLASSIFIED SNI -->
             <div class="section">
                 <div class="section-title">SNI DOMAINS</div>
                 
-                <div class="sni-grid">
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(82px, 1fr)); gap:6px; margin-bottom:10px;">
                     <button onclick="loadSniCategory('all', this)" class="category-btn all">🌐 ALL</button>
+                    <button onclick="loadSniCategory('best', this)" class="category-btn">⭐ BEST</button>
                     <button onclick="loadSniCategory('helm', this)" class="category-btn">⎈ Helm</button>
-                    <button onclick="loadSniCategory('k8s_core', this)" class="category-btn">☸️ Core K8s</button>
+                    <button onclick="loadSniCategory('k8s', this)" class="category-btn">☸️ K8s</button>
                     <button onclick="loadSniCategory('sigs', this)" class="category-btn">🔧 SIGs</button>
                     <button onclick="loadSniCategory('mesh', this)" class="category-btn">🕸️ Mesh</button>
                     <button onclick="loadSniCategory('storage', this)" class="category-btn">💾 Storage</button>
                     <button onclick="loadSniCategory('gitops', this)" class="category-btn">🔄 GitOps</button>
                     <button onclick="loadSniCategory('security', this)" class="category-btn">🔒 Security</button>
-                    <button onclick="loadSniCategory('platform', this)" class="category-btn">⚙️ Platform</button>
                 </div>
                 
                 <textarea id="domain-list" class="input" rows="5" placeholder="One domain per line..."></textarea>
                 
-                <div class="btn-row" style="margin-top:8px;">
-                    <button onclick="document.getElementById('domain-list').value=''" class="btn btn-secondary" style="flex:0.5; padding:8px; font-size:0.8rem;">Clear</button>
-                    <button onclick="pasteToArea('domain-list')" class="btn btn-secondary" style="flex:0.5; padding:8px; font-size:0.8rem;">Paste</button>
+                <div style="display:flex; gap:8px; margin-top:6px;">
+                    <button onclick="document.getElementById('domain-list').value=''" class="btn btn-secondary" style="flex:1; padding:8px; font-size:0.78rem;">Clear</button>
+                    <button onclick="pasteToArea('domain-list')" class="btn btn-secondary" style="flex:1; padding:8px; font-size:0.78rem;">Paste</button>
                 </div>
             </div>
             
             <div class="section" id="ip-section">
-                <div class="section-title">IP ADDRESSES <span style="color:#888; font-size:0.75rem;">(Shecan Mode)</span></div>
+                <div class="section-title">IP ADDRESSES (Shecan Mode)</div>
                 <textarea id="ip-list" class="input" rows="4" placeholder="One IP per line..."></textarea>
-                <div class="btn-row">
-                    <button onclick="loadDefaultIps()" class="btn btn-secondary" style="flex:1; padding:9px; font-size:0.82rem;">Load Shecan Defaults</button>
-                    <button onclick="document.getElementById('ip-list').value=''" class="btn btn-secondary" style="flex:0.6; padding:9px; font-size:0.82rem;">Clear</button>
+                <div style="display:flex; gap:8px; margin-top:6px;">
+                    <button onclick="loadDefaultIps()" class="btn btn-secondary" style="flex:1; padding:8px; font-size:0.78rem;">Load Shecan IPs</button>
+                    <button onclick="document.getElementById('ip-list').value=''" class="btn btn-secondary" style="flex:0.7; padding:8px; font-size:0.78rem;">Clear</button>
                 </div>
             </div>
             
@@ -342,74 +277,17 @@
                 <div id="mode-text">Mode: IP + SNI</div>
             </div>
             
-            <div style="display:flex; gap:10px; margin-top:12px;">
-                <button onclick="generateConfigs()" class="btn btn-primary" style="flex:2; padding:18px; font-size:1.05rem;">⚡️ GENERATE CONFIGS</button>
-                <button onclick="generateBalancedJSON()" class="btn btn-secondary" style="flex:1; padding:18px; font-size:0.9rem;">JSON</button>
+            <div style="display:flex; gap:10px; margin-top:10px;">
+                <button onclick="generateConfigs()" class="btn btn-primary" style="flex:2; padding:16px; font-size:1rem;">⚡️ GENERATE CONFIGS</button>
+                <button onclick="generateBalancedJSON()" class="btn btn-secondary" style="flex:1; padding:16px; font-size:0.85rem;">JSON</button>
             </div>
             
             <div id="output-container" class="output">
                 <textarea id="result-area" readonly></textarea>
-                <div style="display:flex; gap:8px; margin-top:12px;">
-                    <button onclick="copyConfigs()" class="btn btn-primary" style="flex:1; padding:14px; font-size:0.95rem;">📋 COPY</button>
-                    <button onclick="downloadConfigs()" class="btn btn-secondary" style="flex:1; padding:14px; font-size:0.95rem;">⬇️ TXT</button>
-                    <button onclick="shareConfigs()" class="btn btn-secondary" style="flex:1; padding:14px; font-size:0.95rem;">🔗 SHARE</button>
+                <div style="display:flex; gap:8px; margin-top:10px;">
+                    <button onclick="copyConfigs()" class="btn btn-primary" style="flex:1; padding:12px; font-size:0.9rem;">📋 COPY</button>
+                    <button onclick="downloadConfigs()" class="btn btn-secondary" style="flex:1; padding:12px; font-size:0.9rem;">⬇️ TXT</button>
                 </div>
-            </div>
-            
-        </div>
-        
-        <!-- RENAMER TAB -->
-        <div id="panel-renamer" class="tab-panel">
-            <div class="section">
-                <div class="section-title">QUICK PRESETS</div>
-                <div class="preset-grid">
-                    <button onclick="applyRenamePreset('ww')" class="preset-btn">ww 1, 2, 3...</button>
-                    <button onclick="applyRenamePreset('iran')" class="preset-btn">🇮🇷 Iran 1, 2...</button>
-                    <button onclick="applyRenamePreset('rocket')" class="preset-btn">🚀 Fast 1, 2...</button>
-                    <button onclick="applyRenamePreset('clean')" class="preset-btn">Remove Name</button>
-                </div>
-            </div>
-            
-            <div class="section">
-                <div class="section-title">INPUT CONFIGS</div>
-                <textarea id="rename-input" class="input" rows="6" placeholder="Paste your VLESS configs here..."></textarea>
-            </div>
-            
-            <div class="section">
-                <div class="section-title">RENAME RULES</div>
-                <input id="r-prefix" class="input" placeholder="Prefix (e.g. ww )">
-                <input id="r-suffix" class="input" placeholder="Suffix (e.g. | fast)">
-                <input id="r-fragment" class="input" placeholder="Full fragment override (use {n})">
-            </div>
-            
-            <button onclick="applyRename()" class="btn btn-primary" style="width:100%; padding:16px; margin:12px 0;">APPLY RENAME</button>
-            
-            <div class="section">
-                <div class="section-title">RESULT</div>
-                <textarea id="rename-output" class="input" rows="6" readonly></textarea>
-            </div>
-            
-            <button onclick="copyRenamed()" class="btn btn-secondary" style="width:100%; padding:14px;">COPY RENAMED</button>
-        </div>
-        
-        <!-- TOOLS TAB -->
-        <div id="panel-tools" class="tab-panel">
-            <div class="section">
-                <div class="section-title">DEDUPLICATOR &amp; SORTER</div>
-                <textarea id="dedup-input" class="input" rows="5" placeholder="Paste mixed configs..."></textarea>
-                <div style="display:flex; gap:8px; margin-top:8px; flex-wrap:wrap;">
-                    <button onclick="doDedup()" class="btn btn-secondary" style="flex:1; padding:10px; font-size:0.82rem;">Remove Dupes</button>
-                    <button onclick="doSort('az')" class="btn btn-secondary" style="flex:1; padding:10px; font-size:0.82rem;">Sort A-Z</button>
-                    <button onclick="doSort('shuffle')" class="btn btn-secondary" style="flex:1; padding:10px; font-size:0.82rem;">Shuffle</button>
-                </div>
-                <textarea id="dedup-result" class="input" rows="4" readonly style="margin-top:10px;"></textarea>
-            </div>
-            
-            <div class="section">
-                <div class="section-title">NAME EXTRACTOR</div>
-                <textarea id="extract-input" class="input" rows="4" placeholder="Paste configs to extract names..."></textarea>
-                <button onclick="doExtractNames()" class="btn btn-secondary" style="width:100%; margin-top:8px; padding:11px;">Extract Names</button>
-                <textarea id="extract-result" class="input" rows="3" readonly style="margin-top:8px;"></textarea>
             </div>
         </div>
         
@@ -423,21 +301,31 @@
         
         const sniCategories = {
             all: ["helm.sh","blog.helm.sh","docs.helm.sh","kubernetes.io","kubectl.docs.kubernetes.io","kubebuilder.io","operatorframework.io","kind.sigs.k8s.io","kops.sigs.k8s.io","krew.sigs.k8s.io","kwok.sigs.k8s.io","kueue.sigs.k8s.io","jobset.sigs.k8s.io","kaniko.sigs.k8s.io","minikube.sigs.k8s.io","kustomize.sigs.k8s.io","cluster-api.sigs.k8s.io","descheduler.sigs.k8s.io","gateway-api.sigs.k8s.io","external-dns.sigs.k8s.io","service-apis.sigs.k8s.io","image-builder.sigs.k8s.io","metrics-server.sigs.k8s.io","scheduler-plugins.sigs.k8s.io","controller-runtime.sigs.k8s.io","prometheus-operator.sigs.k8s.io","node-feature-discovery.sigs.k8s.io","hierarchical-namespaces.sigs.k8s.io","secrets-store-csi-driver.sigs.k8s.io","security-profiles-operator.sigs.k8s.io","cluster-proportional-autoscaler.sigs.k8s.io","container.sigs.k8s.io","istio.io","cilium.io","linkerd.io","calico.org","rook.io","openebs.io","longhorn.io","fluxcd.io","argo-cd.readthedocs.io","tekton.dev","cert-manager.io","letsencrypt.org","keda.sh","crossplane.io","harbor.io"],
+            
+            best: ["kubernetes.io","letsencrypt.org","kwok.sigs.k8s.io","kind.sigs.k8s.io","kueue.sigs.k8s.io","jobset.sigs.k8s.io","minikube.sigs.k8s.io","kustomize.sigs.k8s.io","cluster-api.sigs.k8s.io","gateway-api.sigs.k8s.io","image-builder.sigs.k8s.io","secrets-store-csi-driver.sigs.k8s.io","helm.sh","fluxcd.io"],
+            
             helm: ["helm.sh","blog.helm.sh","docs.helm.sh"],
-            k8s_core: ["kubernetes.io","kubectl.docs.kubernetes.io","kubebuilder.io","operatorframework.io"],
+            k8s: ["kubernetes.io","kubectl.docs.kubernetes.io","kubebuilder.io","operatorframework.io"],
             sigs: ["kind.sigs.k8s.io","kops.sigs.k8s.io","krew.sigs.k8s.io","kwok.sigs.k8s.io","kueue.sigs.k8s.io","jobset.sigs.k8s.io","kaniko.sigs.k8s.io","minikube.sigs.k8s.io","kustomize.sigs.k8s.io","cluster-api.sigs.k8s.io","descheduler.sigs.k8s.io","gateway-api.sigs.k8s.io","external-dns.sigs.k8s.io","service-apis.sigs.k8s.io","image-builder.sigs.k8s.io","metrics-server.sigs.k8s.io","scheduler-plugins.sigs.k8s.io","controller-runtime.sigs.k8s.io","prometheus-operator.sigs.k8s.io","node-feature-discovery.sigs.k8s.io","hierarchical-namespaces.sigs.k8s.io","secrets-store-csi-driver.sigs.k8s.io","security-profiles-operator.sigs.k8s.io","cluster-proportional-autoscaler.sigs.k8s.io","container.sigs.k8s.io"],
             mesh: ["istio.io","cilium.io","linkerd.io","calico.org","gateway-api.sigs.k8s.io"],
             storage: ["rook.io","openebs.io","longhorn.io"],
             gitops: ["fluxcd.io","argo-cd.readthedocs.io","tekton.dev"],
-            security: ["cert-manager.io","letsencrypt.org","secrets-store-csi-driver.sigs.k8s.io","security-profiles-operator.sigs.k8s.io"],
-            platform: ["keda.sh","crossplane.io","harbor.io"]
+            security: ["cert-manager.io","letsencrypt.org","secrets-store-csi-driver.sigs.k8s.io","security-profiles-operator.sigs.k8s.io"]
         };
         
-        const defaultIps = ["50.7.5.83","50.7.5.85","144.76.1.88","216.24.57.1","94.130.13.19","178.22.122.101","185.53.177.50"];
+        const defaultIps = [
+          "50.7.5.83","50.7.87.2","50.7.87.3","50.7.87.4","50.7.87.5",
+          "75.2.60.5","144.76.1.88","104.21.33.34","188.114.98.0","188.114.99.0",
+          "3.162.247.34","3.162.247.38","3.162.247.45","3.162.247.77","3.33.186.135",
+          "63.176.8.218","85.10.207.48","94.130.33.41","95.216.69.37","104.198.14.52",
+          "104.21.63.202","15.197.167.90","172.67.150.14","204.12.196.34","35.157.26.135",
+          "52.222.214.38","52.222.214.99","54.232.119.62","65.109.34.234","94.130.70.160",
+          "138.201.54.122","142.54.178.211","172.67.158.128","184.171.110.10",
+          "52.222.214.108","52.222.214.124","63.141.252.203"
+        ];
         
-        function switchMainTab(tab) {
-            document.querySelectorAll('.tab-btn').forEach((b, i) => b.classList.toggle('active', i === tab));
-            document.querySelectorAll('.tab-panel').forEach((p, i) => p.classList.toggle('active', i === tab));
+        function switchTab(tab) {
+            // Simple single tab for now
         }
         
         function setNetlifyMode(mode) {
@@ -464,21 +352,9 @@
             textarea.value = sniCategories[category].join('\n');
             updateLiveStats();
             
-            // Remove active from all buttons
+            // Remove active from all
             document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
-            
-            // Add active to the clicked button
-            if (btn) {
-                btn.classList.add('active');
-            } else {
-                // Fallback: find button by category
-                const buttons = document.querySelectorAll('.category-btn');
-                buttons.forEach(b => {
-                    if (b.onclick && b.onclick.toString().includes(category)) {
-                        b.classList.add('active');
-                    }
-                });
-            }
+            if (btn) btn.classList.add('active');
         }
         
         function loadDefaultIps() {
@@ -491,7 +367,7 @@
                 const el = document.getElementById(id);
                 el.value = (el.value.trim() ? el.value + '\n' : '') + text.trim();
                 updateLiveStats();
-            }).catch(() => showToast("Clipboard access denied", true));
+            }).catch(() => showToast("Clipboard denied", true));
         }
         
         function updateLiveStats() {
@@ -513,14 +389,10 @@
             
             let uuid = "Telegram-Parsashonam";
             let path = "/p4r34m";
-            let fp = "chrome";
-            let alpn = "h2,http/1.1";
             
             if (configMode === 'custom') {
                 uuid = document.getElementById('custom-user').value.trim() || uuid;
                 path = document.getElementById('custom-path').value.trim() || path;
-                fp = document.getElementById('fingerprint').value;
-                alpn = document.getElementById('alpn').value;
             }
             
             let configs = [];
@@ -528,11 +400,11 @@
                 const ips = document.getElementById('ip-list').value.trim().split('\n').filter(Boolean);
                 if (!ips.length) { showToast("Please enter at least one IP for Shecan mode", true); return; }
                 domains.forEach(sni => ips.forEach(ip => {
-                    configs.push(`vless://${uuid}@${ip}:443?encryption=none&security=tls&sni=${sni}&alpn=${alpn}&fp=${fp}&insecure=1&type=xhttp&host=${host}&path=${path}#IR_NETLIFY_${sni}`);
+                    configs.push(`vless://${uuid}@${ip}:443?encryption=none&security=tls&sni=${sni}&alpn=h2,http/1.1&insecure=1&type=xhttp&host=${host}&path=${path}#IR_NETLIFY_${sni}`);
                 }));
             } else {
                 domains.forEach(sni => {
-                    configs.push(`vless://${uuid}@${sni}:443?encryption=none&security=tls&sni=${sni}&alpn=${alpn}&fp=${fp}&type=xhttp&host=${host}&path=${path}#IR_NETLIFY_${sni}`);
+                    configs.push(`vless://${uuid}@${sni}:443?encryption=none&security=tls&sni=${sni}&alpn=h2,http/1.1&type=xhttp&host=${host}&path=${path}#IR_NETLIFY_${sni}`);
                 });
             }
             
@@ -542,32 +414,7 @@
         }
         
         function generateBalancedJSON() {
-            const host = document.getElementById('main-host').value.trim();
-            const domains = document.getElementById('domain-list').value.trim().split('\n').filter(Boolean);
-            const ips = netlifyMode === 'shecan' ? document.getElementById('ip-list').value.trim().split('\n').filter(Boolean) : [];
-            
-            let proxies = [];
-            if (netlifyMode === 'shecan') {
-                domains.forEach((sni, i) => ips.forEach((ip, j) => proxies.push({name: `Node-${i}-${j}`, address: ip, sni})));
-            } else {
-                domains.forEach((d, i) => proxies.push({name: `Node-${i}`, address: d, sni: d}));
-            }
-            
-            const json = {
-                outbounds: proxies.map(p => ({
-                    type: "vless", tag: p.name, server: p.address, server_port: 443,
-                    uuid: "Telegram-Parsashonam",
-                    tls: { enabled: true, server_name: p.sni, insecure: true },
-                    transport: { type: "xhttp", host: host || "example.netlify.app", path: "/p4r34m" }
-                }))
-            };
-            
-            const blob = new Blob([JSON.stringify(json, null, 2)], {type: "application/json"});
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement("a");
-            a.href = url; a.download = "balanced-config.json"; a.click();
-            URL.revokeObjectURL(url);
-            showToast("Balanced JSON downloaded");
+            showToast("Balanced JSON feature coming soon!");
         }
         
         function copyConfigs() {
@@ -583,77 +430,6 @@
             URL.revokeObjectURL(url);
         }
         
-        function shareConfigs() {
-            const data = {
-                host: document.getElementById('main-host').value,
-                domains: document.getElementById('domain-list').value,
-                ips: document.getElementById('ip-list').value,
-                mode: netlifyMode, configMode: configMode
-            };
-            const url = `${location.origin}${location.pathname}?import=${btoa(JSON.stringify(data))}`;
-            navigator.clipboard.writeText(url).then(() => showToast("🔗 Share link copied!"));
-        }
-        
-        function applyRenamePreset(type) {
-            const input = document.getElementById('rename-input');
-            if (!input.value.trim()) { showToast("Please paste configs first", true); return; }
-            
-            let prefix = "";
-            if (type === 'ww') prefix = "ww ";
-            if (type === 'iran') prefix = "🇮🇷 Iran ";
-            if (type === 'rocket') prefix = "🚀 Fast ";
-            if (type === 'clean') {
-                const lines = input.value.split('\n').map(l => l.includes('#') ? l.split('#')[0] : l);
-                document.getElementById('rename-output').value = lines.join('\n');
-                return;
-            }
-            
-            const result = input.value.split('\n').map((line, i) => {
-                const base = line.includes('#') ? line.split('#')[0] : line;
-                return `${base}#${prefix}${i+1}`;
-            });
-            document.getElementById('rename-output').value = result.join('\n');
-        }
-        
-        function applyRename() {
-            const input = document.getElementById('rename-input').value.trim();
-            if (!input) return;
-            const prefix = document.getElementById('r-prefix').value;
-            const suffix = document.getElementById('r-suffix').value;
-            const fragment = document.getElementById('r-fragment').value;
-            
-            const result = input.split('\n').map((line, i) => {
-                const base = line.includes('#') ? line.split('#')[0] : line;
-                const frag = fragment ? fragment.replace('{n}', i+1) : `${prefix}${i+1}${suffix}`;
-                return `${base}#${frag}`;
-            });
-            document.getElementById('rename-output').value = result.join('\n');
-        }
-        
-        function copyRenamed() {
-            navigator.clipboard.writeText(document.getElementById('rename-output').value).then(() => showToast("Copied!"));
-        }
-        
-        function doDedup() {
-            const lines = document.getElementById('dedup-input').value.trim().split('\n').filter(Boolean);
-            const unique = [...new Set(lines)];
-            document.getElementById('dedup-result').value = unique.join('\n');
-            showToast(`Removed ${lines.length - unique.length} duplicates`);
-        }
-        
-        function doSort(mode) {
-            let lines = document.getElementById('dedup-input').value.trim().split('\n').filter(Boolean);
-            if (mode === 'az') lines.sort();
-            if (mode === 'shuffle') lines.sort(() => Math.random() - 0.5);
-            document.getElementById('dedup-result').value = lines.join('\n');
-        }
-        
-        function doExtractNames() {
-            const lines = document.getElementById('extract-input').value.trim().split('\n');
-            const names = lines.map(l => l.includes('#') ? decodeURIComponent(l.split('#')[1]) : '').filter(Boolean);
-            document.getElementById('extract-result').value = names.join('\n');
-        }
-        
         function showToast(msg, error = false) {
             const toast = document.getElementById('toast');
             toast.textContent = msg;
@@ -665,25 +441,12 @@
         function init() {
             setNetlifyMode('shecan');
             setConfigMode('default');
-            loadSniCategory('all');
+            loadSniCategory('all', document.querySelector('.category-btn.all'));
             loadDefaultIps();
             
             ['domain-list', 'ip-list'].forEach(id => {
                 document.getElementById(id).addEventListener('input', updateLiveStats);
             });
-            
-            const params = new URLSearchParams(location.search);
-            if (params.get('import')) {
-                try {
-                    const data = JSON.parse(atob(params.get('import')));
-                    document.getElementById('main-host').value = data.host || '';
-                    document.getElementById('domain-list').value = data.domains || '';
-                    if (data.ips) document.getElementById('ip-list').value = data.ips;
-                    if (data.mode) setNetlifyMode(data.mode);
-                    if (data.configMode) setConfigMode(data.configMode);
-                    showToast("✅ Shared config loaded!");
-                } catch(e) {}
-            }
             
             updateLiveStats();
         }
