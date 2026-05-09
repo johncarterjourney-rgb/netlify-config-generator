@@ -1,12 +1,12 @@
 # netlify-config-generator
 
-**IR NETLIFY V10 • GROK EDITION ⚡️**
+**IR NETLIFY V10 • BACHELOR EDITION ⚡️**
 
-**ابزار سبک، مینیمال و سیاه‌وسفید تولید کانفیگ VLESS** — با طراحی الهام‌گرفته از Grok.
+**ابزار سبک، مینیمال و سیاه‌وسفید تولید کانفیگ VLESS** — نسخه BACHELOR EDITION با رابط کاربری حرفه‌ای.
 
 > یک ابزار قدرتمند و سبک برای تولید کانفیگ‌های باکیفیت VLESS + xhttp بهینه‌شده برای نتلیفای، با دسته‌بندی هوشمند دامنه‌های SNI.
 
-![Version](https://img.shields.io/badge/Version-V10_Grok-black)
+![Version](https://img.shields.io/badge/Version-V10_Bachelor-black)
 ![UI](https://img.shields.io/badge/UI-Black_White_%26_Minimalist-white)
 ![Language](https://img.shields.io/badge/Language-Persian_%2B_English-blue)
 
@@ -14,7 +14,7 @@
 
 ## ✨ ویژگی‌ها / Features
 
-- **🖤 رابط کاربری سبک Grok** — طراحی سیاه و سفید مینیمال و حرفه‌ای
+- **🖤 رابط کاربری مینیمال حرفه‌ای** — طراحی سیاه و سفید تمیز و مدرن
 - **🌐 دسته‌بندی هوشمند SNI** (۹ دسته + دکمه ALL):
   - Helm Ecosystem
   - Core Kubernetes
