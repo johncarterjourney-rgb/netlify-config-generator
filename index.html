@@ -282,11 +282,27 @@
                 <button onclick="generateBalancedJSON()" class="btn btn-secondary" style="flex:1; padding:16px; font-size:0.85rem;">JSON</button>
             </div>
             
+            <!-- Advanced Tools -->
+            <div class="section" style="margin-top:16px; border:1px dashed #444; padding:14px; border-radius:14px; background:#111;">
+                <div class="section-title" style="margin-bottom:10px; color:#888;">🔧 ADVANCED TOOLS (از نسخه‌های قبلی)</div>
+                
+                <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px;">
+                    <button onclick="renameConfigs('ww')" class="btn btn-secondary" style="padding:8px 12px; font-size:0.75rem;">ww</button>
+                    <button onclick="renameConfigs('iran')" class="btn btn-secondary" style="padding:8px 12px; font-size:0.75rem;">🇮🇷 ایران</button>
+                    <button onclick="renameConfigs('fast')" class="btn btn-secondary" style="padding:8px 12px; font-size:0.75rem;">🚀 Fast</button>
+                    <button onclick="renameConfigs('clean')" class="btn btn-secondary" style="padding:8px 12px; font-size:0.75rem;">Clean</button>
+                    <button onclick="dedupAndSort()" class="btn btn-secondary" style="padding:8px 12px; font-size:0.75rem;">Dedup + Sort</button>
+                    <button onclick="shuffleConfigs()" class="btn btn-secondary" style="padding:8px 12px; font-size:0.75rem;">🔀 Shuffle</button>
+                    <button onclick="extractNames()" class="btn btn-secondary" style="padding:8px 12px; font-size:0.75rem;">Extract Names</button>
+                </div>
+            </div>
+            
             <div id="output-container" class="output">
                 <textarea id="result-area" readonly></textarea>
                 <div style="display:flex; gap:8px; margin-top:10px;">
                     <button onclick="copyConfigs()" class="btn btn-primary" style="flex:1; padding:12px; font-size:0.9rem;">📋 COPY</button>
                     <button onclick="downloadConfigs()" class="btn btn-secondary" style="flex:1; padding:12px; font-size:0.9rem;">⬇️ TXT</button>
+                    <button onclick="shareConfigs()" class="btn btn-secondary" style="flex:1; padding:12px; font-size:0.9rem;">🔗 SHARE</button>
                 </div>
             </div>
         </div>
@@ -414,7 +430,79 @@
         }
         
         function generateBalancedJSON() {
-            showToast("Balanced JSON feature coming soon!");
+            const text = document.getElementById('result-area').value;
+            if (!text) { showToast("ابتدا کانفیگ تولید کنید!", true); return; }
+            
+            const lines = text.trim().split('\n\n');
+            const json = {
+                version: "V10 Bachelor Edition",
+                total: lines.length,
+                configs: lines.map((line, i) => {
+                    const match = line.match(/#(.+)$/);
+                    return {
+                        id: i + 1,
+                        remark: match ? match[1] : `Config ${i+1}`,
+                        vless: line.split('#')[0]
+                    };
+                })
+            };
+            
+            const jsonStr = JSON.stringify(json, null, 2);
+            document.getElementById('result-area').value = jsonStr;
+            showToast("✅ Balanced JSON آماده شد!");
+        }
+        
+        function renameConfigs(preset) {
+            let text = document.getElementById('result-area').value;
+            if (!text) { showToast("ابتدا کانفیگ تولید کنید!", true); return; }
+            
+            let prefix = "";
+            switch(preset) {
+                case 'ww': prefix = "ww | "; break;
+                case 'iran': prefix = "🇮🇷 IR | "; break;
+                case 'fast': prefix = "🚀 FAST | "; break;
+                case 'clean': prefix = ""; break;
+            }
+            
+            const newText = text.split('\n\n').map(line => {
+                return line.replace(/#(.+)$/, `#${prefix}$1`);
+            }).join('\n\n');
+            
+            document.getElementById('result-area').value = newText;
+            showToast(`✅ ریمارک‌ها به ${preset.toUpperCase()} تغییر کرد`);
+        }
+        
+        function dedupAndSort() {
+            let text = document.getElementById('result-area').value;
+            if (!text) return;
+            
+            const lines = [...new Set(text.trim().split('\n\n'))]; // dedup
+            lines.sort(); // sort
+            document.getElementById('result-area').value = lines.join('\n\n');
+            showToast(`✅ تکراری‌ها حذف و مرتب شد (${lines.length} کانفیگ)`);
+        }
+        
+        function shuffleConfigs() {
+            let text = document.getElementById('result-area').value;
+            if (!text) return;
+            
+            let lines = text.trim().split('\n\n');
+            for (let i = lines.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [lines[i], lines[j]] = [lines[j], lines[i]];
+            }
+            document.getElementById('result-area').value = lines.join('\n\n');
+            showToast("✅ کانفیگ‌ها شافل شدند!");
+        }
+        
+        function extractNames() {
+            let text = document.getElementById('result-area').value;
+            if (!text) return;
+            
+            const names = text.match(/#(.+)/g) || [];
+            const cleanNames = names.map(n => n.replace('#', '').trim());
+            document.getElementById('result-area').value = cleanNames.join('\n');
+            showToast(`✅ ${cleanNames.length} نام استخراج شد`);
         }
         
         function copyConfigs() {
@@ -428,6 +516,22 @@
             const a = document.createElement("a");
             a.href = url; a.download = `IR_NETLIFY_V10_${Date.now()}.txt`; a.click();
             URL.revokeObjectURL(url);
+        }
+        
+        function shareConfigs() {
+            const text = document.getElementById('result-area').value;
+            if (!text) { showToast("ابتدا کانفیگ تولید کنید!", true); return; }
+            
+            const shareText = `🔗 IR NETLIFY V10 BACHELOR EDITION\n\n${text}\n\n📌 Shared from: https://github.com/johncarterjourney-rgb/netlify-config-generator`;
+            
+            navigator.clipboard.writeText(shareText).then(() => {
+                showToast("🔗 لینک شیر آماده شد! (کپی شد)");
+            }).catch(() => {
+                // Fallback
+                const encoded = btoa(unescape(encodeURIComponent(text)));
+                const shareUrl = `${location.origin}${location.pathname}#configs=${encoded}`;
+                prompt("لینک شیر (کپی کنید):", shareUrl);
+            });
         }
         
         function showToast(msg, error = false) {
