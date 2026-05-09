@@ -1,111 +1,96 @@
-# IR NETLIFY V10 • ULTIMATE BACHELOR ⚡️
+# IR NETLIFY V10 • GROK EDITION ⚡️
 
-**IR Netlify Config Generator V10 - Ultimate Bachelor Edition**  
-ابزار **زیبا، مدرن، قدرتمند و حرفه‌ای** برای تولید کانفیگ VLESS نتلیفای با رابط کاربری پرمیوم و افکت‌های نئون نسل بعدی
+**ابزار سبک، مینیمال و سیاه‌وسفید تولید کانفیگ VLESS** — با طراحی الهام‌گرفته از Grok.
 
-![Version](https://img.shields.io/badge/Version-V10_Ultimate_Bachelor-00f0ff?style=for-the-badge&logo=netlify&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-00ff9d?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Active%20%26%20Blazing%20Fast-c300ff?style=for-the-badge)
-![Platform](https://img.shields.io/badge/Platform-Web%20%7C%20Mobile-00f0ff?style=for-the-badge)
-![Language](https://img.shields.io/badge/100%25%20Client--Side-ff00cc?style=for-the-badge)
+> یک ابزار قدرتمند و سبک برای تولید کانفیگ‌های باکیفیت VLESS + xhttp بهینه‌شده برای نتلیفای، با دسته‌بندی هوشمند دامنه‌های SNI.
 
----
-
-## ✨ ویژگی‌های V10 Ultimate Bachelor
-
-- 🎨 **طراحی پرمیوم V10** — افکت شیشه‌ای پیشرفته + نئون سه‌رنگ + اسکن‌لاین + انیمیشن کانفetti
-- ⚡ **دو حالت هوشمند**: IP + SNI (شکن) و Direct SNI با سوئیچ یک‌کلیکی
-- 🔧 **سرور کاملاً دلخواه** — UUID تصادفی + مسیر دلخواه + فینگرپرینت (Chrome/Firefox/Safari/Random)
-- 📊 **لایو استتس** — نمایش لحظه‌ای تعداد کانفیگ‌ها قبل از تولید
-- 🔗 **لینک اشتراک‌گذاری** — تولید لینک کوتاه برای دوستان (import/export خودکار)
-- 📋 **کپی فوری + دانلود TXT** — با نام‌گذاری هوشمند تاریخ‌دار
-- 🌐 **پشتیبانی کامل از Xray / Sing-box / Nekobox / v2rayNG**
-- ⚙️ **پارامترهای پیشرفته** — ALPN، Fingerprint، xHTTP Transport
-- 📱 **کاملاً ریسپانسیو** — بهترین تجربه روی موبایل و دسکتاپ
-- 🚀 **بدون سرور** — ۱۰۰٪ در مرورگر اجرا می‌شود (حریم خصوصی کامل)
-- 🎉 **انیمیشن کانفetti** — وقتی لوگو را کلیک کنید!
+![Version](https://img.shields.io/badge/Version-V10_Grok-black)
+![UI](https://img.shields.io/badge/UI-Black_White_%26_Minimalist-white)
+![Language](https://img.shields.io/badge/Language-Persian_%2B_English-blue)
 
 ---
 
-## 🚀 دمو زنده (V10)
+## ✨ ویژگی‌ها / Features
 
-**همین الان تست کنید:**
-
-[**🌐 IR NETLIFY V10 ULTIMATE BACHELOR**](https://johncarterjourney-rgb.github.io/netlify-config-generator/)  
-*(فایل HTML تک‌فایل — فقط ذخیره کنید و باز کنید)*
-
----
-
-## 📖 نحوه استفاده (۳۰ ثانیه)
-
-1. **دامنه نتلیفای** خود را وارد کنید (مثال: `myproject.netlify.app`)
-2. **دامنه‌های SNI** را وارد کنید (پیش‌فرض: CNCF / Kubernetes / Cloudflare / Popular)
-3. (در حالت شکن) **آدرس‌های IP** را اضافه کنید
-4. **GENERATE VLESS CONFIGS** را بزنید
-5. از **COPY ALL** یا **DOWNLOAD TXT** استفاده کنید
-
-> **نکته حرفه‌ای**: از حالت **IP + SNI (Shecan)** برای پایداری بیشتر در ایران استفاده کنید.
-
----
-
-## 🆕 چه چیزی در V10 اضافه شد؟ (نسبت به V9)
-
-| ویژگی جدید                  | توضیح                                      | فایده برای کاربر ایرانی          |
-|-----------------------------|-------------------------------------------|----------------------------------|
-| Live Config Counter         | نمایش لحظه‌ای تعداد کانفیگ              | بدون حدس و گمان                 |
-| Shareable Link              | لینک کوتاه برای ارسال به دوستان         | اشتراک‌گذاری فوق‌العاده آسان   |
-| Advanced Fingerprint & ALPN | انتخاب Chrome/Firefox/Safari/Random      | دور زدن تشخیص بهتر             |
-| Random UUID Button          | تولید UUID تصادفی با یک کلیک            | امنیت بیشتر                     |
-| Multiple Domain Presets     | CNCF + Popular + Cloudflare               | انتخاب سریع دامنه‌های تمیز     |
-| Enhanced UI/UX              | اسکن‌لاین، گرادیانت متحرک، hover effect | تجربه کاربری لوکس              |
-| Confetti Animation          | کلیک روی لوگو                             | حس باحال بچلر مود! ⚡️           |
+- **🖤 رابط کاربری سبک Grok** — طراحی سیاه و سفید مینیمال و حرفه‌ای
+- **🌐 دسته‌بندی هوشمند SNI** (۹ دسته + دکمه ALL):
+  - Helm Ecosystem
+  - Core Kubernetes
+  - Kubernetes SIGs (.sigs.k8s.io)
+  - Service Mesh & Networking
+  - Storage
+  - GitOps & Delivery
+  - Security & PKI
+  - Platform & Orchestration
+- **⚡ دو حالت**: IP + SNI (شکن) و Direct SNI
+- **🔧 ابزارهای پیشرفته**:
+  - تغییر نام کانفیگ‌ها با پرست‌های آماده (ww، 🇮🇷 ایران، 🚀 Fast، Clean)
+  - حذف تکراری + مرتب‌سازی + شافل
+  - استخراج نام کانفیگ‌ها
+- **📦 خروجی Balanced JSON** برای Xray و Sing-box
+- **🔗 لینک اشتراکی** — کانفیگ خود را برای دیگران بفرستید
+- **📱 کاملاً ریسپانسیو** و بدون نیاز به اینترنت (فایل تک‌صفحه‌ای)
 
 ---
 
-## 📸 پیش‌نمایش (در مرورگر)
+## 🚀 نحوه استفاده / How to Use
 
-![IR NETLIFY V10 Screenshot](https://github.com/johncarterjourney-rgb/netlify-config-generator/raw/main/preview.jpg)
-
-*(اگر عکس ندارید، بعد از آپلود ریپو، این بخش را با عکس واقعی جایگزین کنید)*
-
----
-
-## 🙏 تشکر ویژه
-
-این پروژه بر اساس نسخه عالی **IR NETLIFY V8 / V9** ساخته شده است.  
-با تشکر فراوان از تیم اصلی:
-
-- **https://ir-netlify.github.io/NETLIFY**
-- کانال تلگرام IR_NETLIFY
+1. فایل `ir-netlify-v10-grok-theme.html` را دانلود کنید
+2. آن را در هر مرورگر مدرنی باز کنید (کروم، فایرفاکس، اج و ...)
+3. **دامنه نتلیفای** خود را وارد کنید
+4. یکی از دکمه‌های دسته‌بندی یا **ALL** را بزنید تا دامنه‌های SNI لود شوند
+5. (اختیاری) به حالت **شکن** بروید و IPها را لود کنید
+6. روی **⚡️ GENERATE CONFIGS** کلیک کنید
+7. کانفیگ‌ها را کپی، دانلود یا به اشتراک بگذارید
 
 ---
 
-## 🛠️ تکنولوژی‌ها
+## 📁 ساختار پروژه / Project Structure
 
-- **HTML5 + CSS3 + Vanilla JavaScript** (بدون فریم‌ورک)
-- Tailwind-like styling + Glassmorphism + Neon Cyberpunk
-- ۱۰۰٪ Client-Side (هیچ داده‌ای به سرور ارسال نمی‌شود)
-- Mobile-First & Fully Responsive
-- PWA Ready (قابلیت نصب روی گوشی)
-
----
-
-## 📝 لایسنس
-
-**MIT License** — آزادانه استفاده، تغییر و توزیع کنید.
+```
+ir-netlify-v10-grok-theme.html   ← ابزار اصلی (فایل تک‌صفحه‌ای)
+README.md                        ← این فایل
+```
 
 ---
 
-## 💬 ارتباط با ما
+## 🛠️ تکنولوژی‌ها / Tech Stack
 
-- **کانال تلگرام**: [@ArchiveTell](https://t.me/ArchiveTell)
-- **گیت‌هاب**: [johncarterjourney-rgb/netlify-config-generator](https://github.com/johncarterjourney-rgb/netlify-config-generator)
-
----
-
-**اگر این ابزار بهتون کمک کرد، حتماً ستاره ⭐ بدید و برای دوستانتون بفرستید!**
+- HTML + CSS + JavaScript خالص (بدون وابستگی خارجی)
+- کاملاً آفلاین
+- دو زبانه (فارسی + انگلیسی)
 
 ---
 
-**IR NETLIFY V10 • ULTIMATE BACHELOR EDITION**  
-*Made with ❤️ for Iranian freedom seekers — May 2026*
+## 📸 پیش‌نمایش / Preview
+
+**تم سیاه و سفید سبک Grok**
+
+- رابط کاربری مینیمال و تمیز
+- کنتراست بالا
+- ظاهر حرفه‌ای
+- سریع و سبک
+
+---
+
+## 🙏 اعتبار / Credits
+
+- ایده اولیه و لیست دامنه‌ها: **@archivetell**
+- طراحی رابط کاربری و دسته‌بندی: سبک مینیمال Grok
+- ساخته شده برای جامعه پروکسی ایران
+
+---
+
+## 📜 لایسنس / License
+
+لایسنس MIT — رایگان برای استفاده و تغییر.
+
+---
+
+**اگر این ابزار براتون مفید بود، لطفاً به ریپو ⭐ استار بدید!**
+
+ساخته شده با ❤️ برای جامعه. ⚡️
+
+---
+
+> **نکته**: این ابزار فقط برای استفاده شخصی و آموزشی است. لطفاً قوانین سرویس‌دهندگان را رعایت کنید.
