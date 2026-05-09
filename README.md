@@ -1,71 +1,111 @@
-# IR NETLIFY V9 • BACHELOR ⚡️
+# IR NETLIFY V10 • ULTIMATE BACHELOR ⚡️
 
-**IR Netlify Config Generator V9 - Bachelor Edition**
+**IR Netlify Config Generator V10 - Ultimate Bachelor Edition**  
+ابزار **زیبا، مدرن، قدرتمند و حرفه‌ای** برای تولید کانفیگ VLESS نتلیفای با رابط کاربری پرمیوم و افکت‌های نئون نسل بعدی
 
-ابزار زیبا، مدرن و قدرتمند برای تولید کانفیگ VLESS برای نتلیفای با رابط کاربری premium
-
-![Version](https://img.shields.io/badge/Version-V9_Bachelor-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-blue)
-![Status](https://img.shields.io/badge/Status-Active-success)
-
----
-
-## ✨ ویژگی‌ها
-
-- 🎨 **طراحی Premium V9 Bachelor** — افکت‌های شیشه‌ای مدرن + نئون
-- ⚡ **دو حالت**: IP + SNI (شکن) و Direct SNI
-- 🔧 **پشتیبانی از سرور دلخواه** — UUID و مسیر دلخواه خودتان
-- 📋 **کپی با یک کلیک** — همه کانفیگ‌ها را فوراً کپی کنید
-- ⬇️ **دانلود TXT** — خروجی کانفیگ‌ها به صورت فایل متنی
-- 📊 **تولید JSON متعادل** — آماده برای Xray/Sing-box با لود بالانسر
-- 🌐 **دمو زنده** از طریق GitHub Pages
+![Version](https://img.shields.io/badge/Version-V10_Ultimate_Bachelor-00f0ff?style=for-the-badge&logo=netlify&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-00ff9d?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active%20%26%20Blazing%20Fast-c300ff?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-Web%20%7C%20Mobile-00f0ff?style=for-the-badge)
+![Language](https://img.shields.io/badge/100%25%20Client--Side-ff00cc?style=for-the-badge)
 
 ---
 
-## 🚀 دمو زنده
+## ✨ ویژگی‌های V10 Ultimate Bachelor
 
-**همین الان امتحان کنید:**  
-[https://johncarterjourney-rgb.github.io/netlify-config-generator/](https://johncarterjourney-rgb.github.io/netlify-config-generator/)
+- 🎨 **طراحی پرمیوم V10** — افکت شیشه‌ای پیشرفته + نئون سه‌رنگ + اسکن‌لاین + انیمیشن کانفetti
+- ⚡ **دو حالت هوشمند**: IP + SNI (شکن) و Direct SNI با سوئیچ یک‌کلیکی
+- 🔧 **سرور کاملاً دلخواه** — UUID تصادفی + مسیر دلخواه + فینگرپرینت (Chrome/Firefox/Safari/Random)
+- 📊 **لایو استتس** — نمایش لحظه‌ای تعداد کانفیگ‌ها قبل از تولید
+- 🔗 **لینک اشتراک‌گذاری** — تولید لینک کوتاه برای دوستان (import/export خودکار)
+- 📋 **کپی فوری + دانلود TXT** — با نام‌گذاری هوشمند تاریخ‌دار
+- 🌐 **پشتیبانی کامل از Xray / Sing-box / Nekobox / v2rayNG**
+- ⚙️ **پارامترهای پیشرفته** — ALPN، Fingerprint، xHTTP Transport
+- 📱 **کاملاً ریسپانسیو** — بهترین تجربه روی موبایل و دسکتاپ
+- 🚀 **بدون سرور** — ۱۰۰٪ در مرورگر اجرا می‌شود (حریم خصوصی کامل)
+- 🎉 **انیمیشن کانفetti** — وقتی لوگو را کلیک کنید!
 
 ---
 
-## 📖 نحوه استفاده
+## 🚀 دمو زنده (V10)
 
-1. **دامنه نتلیفای** خود را وارد کنید
-2. **دامنه‌های SNI** را اضافه کنید (هر خط یک دامنه)
-3. (اختیاری) **آدرس‌های IP** را برای حالت شکن اضافه کنید
-4. روی **GENERATE VLESS CONFIGS** کلیک کنید
-5. از **Copy Configs** یا **Download TXT** استفاده کنید
+**همین الان تست کنید:**
+
+[**🌐 IR NETLIFY V10 ULTIMATE BACHELOR**](https://johncarterjourney-rgb.github.io/netlify-config-generator/)  
+*(فایل HTML تک‌فایل — فقط ذخیره کنید و باز کنید)*
+
+---
+
+## 📖 نحوه استفاده (۳۰ ثانیه)
+
+1. **دامنه نتلیفای** خود را وارد کنید (مثال: `myproject.netlify.app`)
+2. **دامنه‌های SNI** را وارد کنید (پیش‌فرض: CNCF / Kubernetes / Cloudflare / Popular)
+3. (در حالت شکن) **آدرس‌های IP** را اضافه کنید
+4. **GENERATE VLESS CONFIGS** را بزنید
+5. از **COPY ALL** یا **DOWNLOAD TXT** استفاده کنید
+
+> **نکته حرفه‌ای**: از حالت **IP + SNI (Shecan)** برای پایداری بیشتر در ایران استفاده کنید.
+
+---
+
+## 🆕 چه چیزی در V10 اضافه شد؟ (نسبت به V9)
+
+| ویژگی جدید                  | توضیح                                      | فایده برای کاربر ایرانی          |
+|-----------------------------|-------------------------------------------|----------------------------------|
+| Live Config Counter         | نمایش لحظه‌ای تعداد کانفیگ              | بدون حدس و گمان                 |
+| Shareable Link              | لینک کوتاه برای ارسال به دوستان         | اشتراک‌گذاری فوق‌العاده آسان   |
+| Advanced Fingerprint & ALPN | انتخاب Chrome/Firefox/Safari/Random      | دور زدن تشخیص بهتر             |
+| Random UUID Button          | تولید UUID تصادفی با یک کلیک            | امنیت بیشتر                     |
+| Multiple Domain Presets     | CNCF + Popular + Cloudflare               | انتخاب سریع دامنه‌های تمیز     |
+| Enhanced UI/UX              | اسکن‌لاین، گرادیانت متحرک، hover effect | تجربه کاربری لوکس              |
+| Confetti Animation          | کلیک روی لوگو                             | حس باحال بچلر مود! ⚡️           |
+
+---
+
+## 📸 پیش‌نمایش (در مرورگر)
+
+![IR NETLIFY V10 Screenshot](https://github.com/johncarterjourney-rgb/netlify-config-generator/raw/main/preview.jpg)
+
+*(اگر عکس ندارید، بعد از آپلود ریپو، این بخش را با عکس واقعی جایگزین کنید)*
 
 ---
 
 ## 🙏 تشکر ویژه
 
-این پروژه بر اساس نسخه V8 ابزار عالی **IR NETLIFY CONFIG GENERATOR** ساخته شده است.
+این پروژه بر اساس نسخه عالی **IR NETLIFY V8 / V9** ساخته شده است.  
+با تشکر فراوان از تیم اصلی:
 
-با تشکر فراوان از پروژه اصلی:  
-**https://ir-netlify.github.io/NETLIFY**
+- **https://ir-netlify.github.io/NETLIFY**
+- کانال تلگرام IR_NETLIFY
 
 ---
 
 ## 🛠️ تکنولوژی‌ها
 
-- HTML + CSS + JavaScript خالص
-- بدون وابستگی خارجی
-- کاملاً responsive و موبایل‌فرندلی
+- **HTML5 + CSS3 + Vanilla JavaScript** (بدون فریم‌ورک)
+- Tailwind-like styling + Glassmorphism + Neon Cyberpunk
+- ۱۰۰٪ Client-Side (هیچ داده‌ای به سرور ارسال نمی‌شود)
+- Mobile-First & Fully Responsive
+- PWA Ready (قابلیت نصب روی گوشی)
 
 ---
 
 ## 📝 لایسنس
 
-لایسنس MIT — رایگان برای استفاده و تغییر
+**MIT License** — آزادانه استفاده، تغییر و توزیع کنید.
 
 ---
 
 ## 💬 ارتباط با ما
 
-کانال تلگرام: **[@ArchiveTell](https://t.me/ArchiveTell)**
+- **کانال تلگرام**: [@ArchiveTell](https://t.me/ArchiveTell)
+- **گیت‌هاب**: [johncarterjourney-rgb/netlify-config-generator](https://github.com/johncarterjourney-rgb/netlify-config-generator)
 
 ---
 
-**اگر این ریپو براتون مفید بود، ستاره بدید!** ⭐
+**اگر این ابزار بهتون کمک کرد، حتماً ستاره ⭐ بدید و برای دوستانتون بفرستید!**
+
+---
+
+**IR NETLIFY V10 • ULTIMATE BACHELOR EDITION**  
+*Made with ❤️ for Iranian freedom seekers — May 2026*
