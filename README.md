@@ -1,33 +1,34 @@
 # netlify-config-generator
 
-**IR NETLIFY V10 • BACHELOR EDITION ⚡️**
+**IR NETLIFY V10.2 • BACHELOR EDITION ⚡️**
 
-**ابزار سبک، مینیمال و سیاه‌وسفید تولید کانفیگ VLESS** — نسخه BACHELOR EDITION با رابط کاربری حرفه‌ای.
+**Powerful VLESS Config Generator for Netlify** — BACHELOR EDITION • 3 Tabs • Multiple Domains • Advanced Tools
 
 > یک ابزار قدرتمند و سبک برای تولید کانفیگ‌های باکیفیت VLESS + xhttp بهینه‌شده برای نتلیفای، با دسته‌بندی هوشمند دامنه‌های SNI.
 
-![Version](https://img.shields.io/badge/Version-V10_Bachelor-black)
-![UI](https://img.shields.io/badge/UI-Black_White_%26_Minimalist-white)
-![Language](https://img.shields.io/badge/Language-Persian_%2B_English-blue)
+![Version](https://img.shields.io/badge/Version-10.2-brightgreen)
+![UI](https://img.shields.io/badge/UI-English_%26_Clean-black)
+![Tabs](https://img.shields.io/badge/Tabs-3-blue)
 
 ---
 
-## ✨ ویژگی‌ها / Features
+## ✨ Features
 
-- **🖤 رابط کاربری مینیمال حرفه‌ای** — طراحی سیاه و سفید تمیز و مدرن
-- **🌐 دسته‌بندی هوشمند SNI** (۹ دسته + دکمه ALL):
-  - Helm Ecosystem
-  - Core Kubernetes
-  - Kubernetes SIGs (.sigs.k8s.io)
-  - Service Mesh & Networking
-  - Storage
-  - GitOps & Delivery
-  - Security & PKI
-  - Platform & Orchestration
-- **⚡ دو حالت**: IP + SNI (شکن) و Direct SNI
-- **🔧 ابزارهای پیشرفته**:
-  - تغییر نام کانفیگ‌ها با پرست‌های آماده (ww، 🇮🇷 ایران، 🚀 Fast، Clean)
-  - حذف تکراری + مرتب‌سازی + شافل
+### ⚡ Generator Tab
+- Multiple Netlify Domains (add as many as you want)
+- IP + SNI (Shecan) & Direct SNI modes
+- Smart SNI categories (ALL, BEST, Helm, K8s...)
+
+### 🔄 Replacer Tab
+- Replace old Netlify domain with new ones
+- Support for **multiple target domains**
+- Auto distribution (round-robin)
+
+### 🔧 Tools Tab
+- Rename Presets: ww | 🇮🇷 IR | 🚀 Fast | Clean
+- Dedup + Sort
+- Shuffle
+- Extract Names only
   - استخراج نام کانفیگ‌ها
 - **📦 خروجی Balanced JSON** برای Xray و Sing-box
 - **🔗 لینک اشتراکی** — کانفیگ خود را برای دیگران بفرستید
@@ -35,15 +36,15 @@
 
 ---
 
-## 🚀 نحوه استفاده / How to Use
+## 🚀 How to Use
 
-1. فایل `index.html` را دانلود کنید (یا مستقیم از دمو آنلاین استفاده کنید)
-2. آن را در هر مرورگر مدرنی باز کنید (کروم، فایرفاکس، اج و ...)
-3. **دامنه نتلیفای** خود را وارد کنید
-4. یکی از دکمه‌های دسته‌بندی یا **ALL** را بزنید تا دامنه‌های SNI لود شوند
-5. (اختیاری) به حالت **شکن** بروید و IPها را لود کنید
-6. روی **⚡️ GENERATE CONFIGS** کلیک کنید
-7. کانفیگ‌ها را کپی، دانلود یا به اشتراک بگذارید
+1. Open `index.html` in any modern browser
+2. **Generator Tab**: Add multiple Netlify domains + generate configs
+3. **Replacer Tab**: Paste old configs + replace with new domains
+4. **Tools Tab**: Clean, rename, shuffle or extract names
+5. Copy or download your final configs
+
+**Pro Tip**: Use multiple Netlify domains in Generator for better load distribution!
 
 ---
 
@@ -95,10 +96,10 @@ README.md    ← این فایل
 
 ---
 
-**اگر این ابزار براتون مفید بود، لطفاً به ریپو ⭐ استار بدید!**
+**If this tool was useful for you, please give the repo a ⭐ star!**
 
-ساخته شده با ❤️ برای جامعه. ⚡️
+Made with ❤️ for the community. ⚡️
 
 ---
 
-> **نکته**: این ابزار فقط برای استفاده شخصی و آموزشی است. لطفاً قوانین سرویس‌دهندگان را رعایت کنید.
+> **Note**: This tool is for personal & educational use only. Please respect service providers' terms.
