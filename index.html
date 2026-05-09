@@ -1,728 +1,694 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="IR NETLIFY V10 • ULTIMATE BACHELOR EDITION ⚡️ The most advanced, beautiful & powerful free VLESS config generator for Iran">
-    <title>IR NETLIFY V10 • ULTIMATE BACHELOR ⚡️</title>
+    <title>IR NETLIFY V10 • GROK EDITION</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
         :root {
-            --neon-cyan: #00f0ff;
-            --neon-purple: #c300ff;
-            --neon-green: #00ff9d;
-            --neon-orange: #ff6b00;
-            --neon-pink: #ff00cc;
-            --glass: rgba(15, 18, 30, 0.96);
-            --glass-border: rgba(0, 240, 255, 0.45);
+            --bg: #0a0a0a;
+            --surface: #161616;
+            --border: #333333;
+            --text: #f5f5f5;
+            --text-dim: #aaaaaa;
+            --accent: #ffffff;
+            --accent-dim: #e0e0e0;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        * { margin:0; padding:0; box-sizing:border-box; }
         
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0a0a0f 0%, #1a0033 100%);
-            color: #e0e0ff;
+            font-family: 'Inter', system_ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow-x: hidden;
+            padding: 20px 12px;
         }
-
-        /* Background effects */
-        body::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 30% 20%, var(--neon-cyan) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 80%, var(--neon-purple) 0%, transparent 50%);
-            opacity: 0.12;
-            filter: blur(140px);
-            animation: pulse 25s infinite alternate ease-in-out;
-            z-index: -1;
-        }
-
-        .scanlines {
-            position: absolute;
-            inset: 0;
-            background: repeating-linear-gradient(
-                to bottom,
-                transparent 0px,
-                transparent 2px,
-                rgba(0, 240, 255, 0.03) 2px,
-                rgba(0, 240, 255, 0.03) 4px
-            );
-            pointer-events: none;
-            z-index: 1;
-            animation: scan 4s linear infinite;
-        }
-
+        
         .container {
-            background: var(--glass);
-            backdrop-filter: blur(32px);
-            border: 1px solid var(--glass-border);
-            border-radius: 32px;
-            padding: 42px 38px;
-            width: 100%;
-            max-width: 520px;
-            box-shadow: 
-                0 0 100px rgba(0, 240, 255, 0.25),
-                inset 0 0 60px rgba(255, 0, 204, 0.1);
-            position: relative;
-            z-index: 2;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            max-width: 560px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 28px 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
         }
-
-        .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.65rem;
-            font-weight: 700;
-            background: linear-gradient(90deg, #00f0ff, #ff00cc, #00ff9d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        
+        .header {
             text-align: center;
-            cursor: pointer;
-            letter-spacing: -2px;
-            transition: all 0.3s ease;
-            text-shadow: 0 0 30px var(--neon-cyan);
-        }
-        .logo:hover { transform: scale(1.05) rotate(2deg); }
-
-        h2 {
-            text-align: center;
-            margin: 8px 0 32px;
-            color: #ccc;
-            letter-spacing: 4px;
-            font-size: 1.1rem;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-
-        .badge {
-            display: inline-block;
-            background: linear-gradient(90deg, var(--neon-orange), #ff00cc);
-            color: #000;
-            font-size: 0.7rem;
-            padding: 2px 10px;
-            border-radius: 9999px;
-            font-weight: 700;
-            margin-left: 8px;
-            vertical-align: middle;
-        }
-
-        .tabs, .sub-tabs {
-            display: flex;
-            gap: 8px;
-            background: rgba(0,0,0,0.45);
-            padding: 6px;
-            border-radius: 20px;
             margin-bottom: 24px;
         }
-
-        .tab-btn, .sub-tab-btn {
+        
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -1.5px;
+        }
+        
+        .version {
+            font-size: 0.7rem;
+            background: #ffffff;
+            color: #000000;
+            padding: 1px 9px;
+            border-radius: 999px;
+            font-weight: 800;
+            margin-left: 6px;
+        }
+        
+        .tabs {
+            display: flex;
+            background: #111111;
+            border-radius: 9999px;
+            padding: 4px;
+            margin: 20px 0;
+            border: 1px solid var(--border);
+        }
+        
+        .tab-btn {
             flex: 1;
-            padding: 15px 18px;
+            padding: 12px 16px;
             border: none;
+            background: transparent;
+            color: var(--text-dim);
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn.active {
+            background: #ffffff;
+            color: #000000;
+            font-weight: 700;
+        }
+        
+        .section {
+            margin-bottom: 22px;
+        }
+        
+        .section-title {
+            font-size: 0.82rem;
+            color: var(--text-dim);
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        
+        .input {
+            width: 100%;
+            padding: 14px 16px;
+            background: #111111;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            color: var(--text);
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+        
+        .input:focus {
+            border-color: #666666;
+            outline: none;
+        }
+        
+        .sni-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .category-btn {
+            padding: 11px 8px;
+            font-size: 0.75rem;
+            background: #1f1f1f;
+            border: 1px solid var(--border);
+            color: var(--text-dim);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            line-height: 1.35;
+        }
+        
+        .category-btn:hover {
+            border-color: #666666;
+            color: var(--text);
+        }
+        
+        .category-btn.all {
+            background: #ffffff;
+            color: #000000;
+            font-weight: 700;
+            border: none;
+        }
+        
+        .category-btn.active {
+            background: #ffffff;
+            color: #000000;
+            border-color: #ffffff;
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 13px 18px;
             border-radius: 16px;
             font-weight: 700;
             font-size: 0.95rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            color: #ddd;
-        }
-
-        .tab-btn.active, .sub-tab-btn.active {
-            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
-            color: #000;
-            box-shadow: 0 0 30px rgba(0, 240, 255, 0.7);
-            transform: translateY(-1px);
-        }
-
-        .input-group {
-            margin-bottom: 24px;
-            position: relative;
-        }
-
-        label {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.88rem;
-            font-weight: 700;
-            color: var(--neon-cyan);
-            margin-bottom: 9px;
-            letter-spacing: 0.5px;
-        }
-
-        .input-group small {
-            color: var(--neon-green);
-            font-weight: 500;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 17px 18px;
-            background: rgba(10, 12, 28, 0.9);
-            border: 1px solid rgba(0, 240, 255, 0.35);
-            border-radius: 18px;
-            color: #fff;
-            font-size: 1.02rem;
-            transition: all 0.3s ease;
-        }
-
-        input:focus, textarea:focus {
-            border-color: var(--neon-cyan);
-            box-shadow: 0 0 0 5px rgba(0, 240, 255, 0.25);
-            outline: none;
-        }
-
-        .action-bar {
-            display: flex;
-            gap: 8px;
-            margin-top: 10px;
-        }
-
-        .btn-small {
-            padding: 9px 16px;
-            font-size: 0.8rem;
-            border-radius: 12px;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.2);
-            color: #ddd;
             cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn-small:hover {
-            background: rgba(0, 240, 255, 0.15);
-            color: var(--neon-cyan);
-            border-color: var(--neon-cyan);
-        }
-
-        .gen-btn {
-            width: 100%;
-            padding: 20px;
-            margin: 20px 0 12px;
-            background: linear-gradient(90deg, #00f0ff, #ff00cc, #00ff9d);
-            background-size: 300% 300%;
-            color: #000;
-            font-weight: 800;
-            font-size: 1.25rem;
+            transition: all 0.3s;
             border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            box-shadow: 0 0 40px rgba(0, 240, 255, 0.8);
-            animation: gradientShift 8s ease infinite;
-            transition: all 0.3s ease;
         }
-
-        .gen-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 55px rgba(0, 240, 255, 1);
+        
+        .btn-primary {
+            background: #ffffff;
+            color: #000000;
         }
-
-        #output-container {
-            margin-top: 30px;
-            animation: fadeIn 0.6s ease forwards;
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #666666;
+            color: var(--text-dim);
         }
-
+        
+        .output {
+            margin-top: 24px;
+            display: none;
+        }
+        
         #result-area {
             width: 100%;
-            min-height: 320px;
-            font-family: 'Space Grotesk', monospace;
-            padding: 20px;
-            background: #0d1117;
-            border: 2px solid #222;
-            border-radius: 20px;
-            color: #0ff;
-            line-height: 1.5;
-            resize: vertical;
-            box-shadow: inset 0 0 25px rgba(0, 240, 255, 0.2);
-        }
-
-        .output-actions {
-            display: flex;
-            gap: 12px;
-            margin-top: 14px;
-        }
-
-        .copy-btn, .download-btn, .share-btn {
-            flex: 1;
+            min-height: 280px;
+            background: #111111;
+            border: 2px solid var(--border);
+            border-radius: 18px;
             padding: 16px;
-            border-radius: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1.05rem;
+            color: #00ff9d;
+            font-family: monospace;
+            font-size: 0.92rem;
+            line-height: 1.45;
+            resize: vertical;
         }
-
-        .copy-btn {
-            background: linear-gradient(90deg, var(--neon-green), #00cc77);
-            color: #000;
-        }
-
-        .download-btn {
-            background: transparent;
-            border: 2px solid var(--neon-cyan);
-            color: var(--neon-cyan);
-        }
-
-        .share-btn {
-            background: transparent;
-            border: 2px solid var(--neon-purple);
-            color: var(--neon-purple);
-        }
-
-        .stats {
-            background: rgba(0, 240, 255, 0.1);
-            border-radius: 16px;
-            padding: 12px 18px;
-            margin-bottom: 18px;
+        
+        .stats-bar {
+            background: #111111;
+            padding: 10px 16px;
+            border-radius: 14px;
             display: flex;
             justify-content: space-between;
-            font-size: 0.9rem;
-            color: var(--neon-cyan);
+            font-size: 0.85rem;
+            margin: 14px 0;
+            border: 1px solid var(--border);
         }
-
+        
         .toast {
             position: fixed;
-            bottom: 30px;
+            bottom: 24px;
             left: 50%;
             transform: translateX(-50%);
-            background: #111;
-            color: var(--neon-cyan);
-            padding: 18px 32px;
+            background: #222222;
+            color: #ffffff;
+            padding: 14px 28px;
             border-radius: 9999px;
-            box-shadow: 0 0 40px rgba(0,240,255,0.7);
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
             display: none;
-            z-index: 10000;
-            align-items: center;
-            gap: 12px;
+            z-index: 9999;
             font-weight: 600;
         }
-
-        @keyframes pulse { 0% { opacity: 0.08; } 100% { opacity: 0.18; } }
-        @keyframes scan { 0% { background-position: 0 0; } 100% { background-position: 0 100%; } }
-        @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
-
-        /* Advanced section */
-        .advanced {
-            background: rgba(255,107,0,0.09);
-            border: 1px dashed #ff6b00;
-            border-radius: 20px;
-            padding: 20px;
-            margin: 20px 0;
+        
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+        
+        .preset-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-bottom: 16px;
         }
-
-        .custom-toggle {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        
+        .preset-btn {
+            padding: 10px 12px;
+            background: #1f1f1f;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-size: 0.82rem;
+            color: var(--text-dim);
             cursor: pointer;
+            text-align: left;
+        }
+        
+        .preset-btn:hover {
+            border-color: #666666;
+            color: var(--text);
         }
     </style>
 </head>
 <body>
-    <div class="scanlines"></div>
-    
     <div class="container">
-        <!-- Header -->
-        <div class="logo" onclick="confettiBurst()">IR NETLIFY <span class="badge">V10</span></div>
-        <h2>ULTIMATE BACHELOR EDITION ⚡️</h2>
-
-        <!-- Mode tabs -->
+        <!-- HEADER -->
+        <div class="header">
+            <div class="logo">IR NETLIFY <span class="version">V10</span></div>
+            <div style="color:#888; font-size:0.85rem; margin-top:4px;">GROK EDITION • BLACK &amp; WHITE</div>
+        </div>
+        
+        <!-- MAIN TABS -->
         <div class="tabs">
-            <button class="tab-btn active" onclick="setMainTab(0)">Netlify VLESS</button>
+            <button onclick="switchMainTab(0)" class="tab-btn active" id="tab0">⚡ Generator</button>
+            <button onclick="switchMainTab(1)" class="tab-btn" id="tab1">✎ Renamer</button>
+            <button onclick="switchMainTab(2)" class="tab-btn" id="tab2">🛠 Tools</button>
         </div>
-
-        <div class="sub-tabs" id="netlify-options">
-            <button class="sub-tab-btn active" id="btn-shecan" onclick="setNetlifyMode('shecan')">IP + SNI (Shecan)</button>
-            <button class="sub-tab-btn" id="btn-normal" onclick="setNetlifyMode('normal')">Direct SNI</button>
-        </div>
-
-        <div class="sub-tabs" id="netlify-config-type">
-            <button class="sub-tab-btn active" id="btn-default" onclick="setConfigMode('default')">Parsa Server</button>
-            <button class="sub-tab-btn" id="btn-custom" onclick="setConfigMode('custom')">Your Server</button>
-        </div>
-
-        <!-- Custom settings -->
-        <div id="custom-settings" class="advanced" style="display:none;">
-            <div class="input-group">
-                <label>Custom UUID <span onclick="generateRandomUUID()" style="cursor:pointer;color:var(--neon-green);font-size:0.8rem;">[RANDOM]</span></label>
-                <input id="custom-user" placeholder="your-uuid-here" type="text">
-            </div>
-            <div class="input-group">
-                <label>Custom Path</label>
-                <input id="custom-path" placeholder="/p4r34m" type="text">
+        
+        <!-- GENERATOR TAB -->
+        <div id="panel-generator" class="tab-panel active">
+            
+            <div class="section">
+                <div class="section-title">MODE</div>
+                <div style="display:flex; gap:8px; margin-bottom:16px;">
+                    <button onclick="setNetlifyMode('shecan')" id="mode-shecan" class="btn btn-primary" style="flex:1; padding:12px 0; font-size:0.9rem;">IP + SNI (Shecan)</button>
+                    <button onclick="setNetlifyMode('normal')" id="mode-normal" class="btn btn-secondary" style="flex:1; padding:12px 0; font-size:0.9rem;">Direct SNI</button>
+                </div>
             </div>
             
-            <!-- Extra advanced options -->
-            <div class="custom-toggle" onclick="toggleAdvanced()">
-                <input type="checkbox" id="advanced-check" checked>
-                <label for="advanced-check" style="margin:0;color:#ddd;">Show advanced parameters</label>
+            <div class="section">
+                <div class="section-title">SERVER TYPE</div>
+                <div style="display:flex; gap:8px; margin-bottom:16px;">
+                    <button onclick="setConfigMode('default')" id="type-default" class="btn btn-secondary" style="flex:1; padding:10px 0; font-size:0.85rem;">Parsa Server</button>
+                    <button onclick="setConfigMode('custom')" id="type-custom" class="btn btn-secondary" style="flex:1; padding:10px 0; font-size:0.85rem;">Custom Server</button>
+                </div>
             </div>
-            <div id="extra-params" style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap;">
-                <select id="fingerprint" style="padding:12px 16px;border-radius:14px;background:rgba(10,12,28,0.9);border:1px solid rgba(0,240,255,0.3);color:#fff;flex:1;min-width:120px;">
-                    <option value="chrome">Fingerprint: Chrome</option>
-                    <option value="firefox">Fingerprint: Firefox</option>
-                    <option value="safari">Fingerprint: Safari</option>
-                    <option value="random">Random</option>
-                </select>
-                <select id="alpn-select" style="padding:12px 16px;border-radius:14px;background:rgba(10,12,28,0.9);border:1px solid rgba(0,240,255,0.3);color:#fff;flex:1;min-width:120px;">
-                    <option value="h2,http/1.1">ALPN: h2,http/1.1</option>
-                    <option value="h2">ALPN: h2 only</option>
-                </select>
+            
+            <div id="custom-settings" style="display:none; background:#1a1a1a; border:1px dashed #555555; padding:16px; border-radius:16px; margin-bottom:20px;">
+                <div class="section-title" style="color:#cccccc;">CUSTOM PARAMETERS</div>
+                <input id="custom-user" class="input" placeholder="Custom UUID">
+                <input id="custom-path" class="input" placeholder="Custom Path (e.g. /p4r34m)">
+                <div style="display:flex; gap:10px; margin-top:8px;">
+                    <select id="fingerprint" class="input" style="flex:1; padding:12px;">
+                        <option value="chrome">Fingerprint: Chrome</option>
+                        <option value="firefox">Fingerprint: Firefox</option>
+                        <option value="safari">Fingerprint: Safari</option>
+                        <option value="random">Random</option>
+                    </select>
+                    <select id="alpn" class="input" style="flex:1; padding:12px;">
+                        <option value="h2,http/1.1">ALPN: h2 + http/1.1</option>
+                        <option value="h2">ALPN: h2 only</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">NETLIFY DOMAIN</div>
+                <input id="main-host" class="input" placeholder="your-project.netlify.app" value="example.netlify.app">
+            </div>
+            
+            <!-- CLASSIFIED SNI -->
+            <div class="section">
+                <div class="section-title">SNI DOMAINS</div>
+                
+                <div class="sni-grid">
+                    <button onclick="loadSniCategory('all', this)" class="category-btn all">🌐 ALL</button>
+                    <button onclick="loadSniCategory('helm', this)" class="category-btn">⎈ Helm</button>
+                    <button onclick="loadSniCategory('k8s_core', this)" class="category-btn">☸️ Core K8s</button>
+                    <button onclick="loadSniCategory('sigs', this)" class="category-btn">🔧 SIGs</button>
+                    <button onclick="loadSniCategory('mesh', this)" class="category-btn">🕸️ Mesh</button>
+                    <button onclick="loadSniCategory('storage', this)" class="category-btn">💾 Storage</button>
+                    <button onclick="loadSniCategory('gitops', this)" class="category-btn">🔄 GitOps</button>
+                    <button onclick="loadSniCategory('security', this)" class="category-btn">🔒 Security</button>
+                    <button onclick="loadSniCategory('platform', this)" class="category-btn">⚙️ Platform</button>
+                </div>
+                
+                <textarea id="domain-list" class="input" rows="5" placeholder="One domain per line..."></textarea>
+                
+                <div class="btn-row" style="margin-top:8px;">
+                    <button onclick="document.getElementById('domain-list').value=''" class="btn btn-secondary" style="flex:0.5; padding:8px; font-size:0.8rem;">Clear</button>
+                    <button onclick="pasteToArea('domain-list')" class="btn btn-secondary" style="flex:0.5; padding:8px; font-size:0.8rem;">Paste</button>
+                </div>
+            </div>
+            
+            <div class="section" id="ip-section">
+                <div class="section-title">IP ADDRESSES <span style="color:#888; font-size:0.75rem;">(Shecan Mode)</span></div>
+                <textarea id="ip-list" class="input" rows="4" placeholder="One IP per line..."></textarea>
+                <div class="btn-row">
+                    <button onclick="loadDefaultIps()" class="btn btn-secondary" style="flex:1; padding:9px; font-size:0.82rem;">Load Shecan Defaults</button>
+                    <button onclick="document.getElementById('ip-list').value=''" class="btn btn-secondary" style="flex:0.6; padding:9px; font-size:0.82rem;">Clear</button>
+                </div>
+            </div>
+            
+            <div class="stats-bar">
+                <div>Generated: <strong id="config-count">0</strong></div>
+                <div id="mode-text">Mode: IP + SNI</div>
+            </div>
+            
+            <div style="display:flex; gap:10px; margin-top:12px;">
+                <button onclick="generateConfigs()" class="btn btn-primary" style="flex:2; padding:18px; font-size:1.05rem;">⚡️ GENERATE CONFIGS</button>
+                <button onclick="generateBalancedJSON()" class="btn btn-secondary" style="flex:1; padding:18px; font-size:0.9rem;">JSON</button>
+            </div>
+            
+            <div id="output-container" class="output">
+                <textarea id="result-area" readonly></textarea>
+                <div style="display:flex; gap:8px; margin-top:12px;">
+                    <button onclick="copyConfigs()" class="btn btn-primary" style="flex:1; padding:14px; font-size:0.95rem;">📋 COPY</button>
+                    <button onclick="downloadConfigs()" class="btn btn-secondary" style="flex:1; padding:14px; font-size:0.95rem;">⬇️ TXT</button>
+                    <button onclick="shareConfigs()" class="btn btn-secondary" style="flex:1; padding:14px; font-size:0.95rem;">🔗 SHARE</button>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- RENAMER TAB -->
+        <div id="panel-renamer" class="tab-panel">
+            <div class="section">
+                <div class="section-title">QUICK PRESETS</div>
+                <div class="preset-grid">
+                    <button onclick="applyRenamePreset('ww')" class="preset-btn">ww 1, 2, 3...</button>
+                    <button onclick="applyRenamePreset('iran')" class="preset-btn">🇮🇷 Iran 1, 2...</button>
+                    <button onclick="applyRenamePreset('rocket')" class="preset-btn">🚀 Fast 1, 2...</button>
+                    <button onclick="applyRenamePreset('clean')" class="preset-btn">Remove Name</button>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">INPUT CONFIGS</div>
+                <textarea id="rename-input" class="input" rows="6" placeholder="Paste your VLESS configs here..."></textarea>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">RENAME RULES</div>
+                <input id="r-prefix" class="input" placeholder="Prefix (e.g. ww )">
+                <input id="r-suffix" class="input" placeholder="Suffix (e.g. | fast)">
+                <input id="r-fragment" class="input" placeholder="Full fragment override (use {n})">
+            </div>
+            
+            <button onclick="applyRename()" class="btn btn-primary" style="width:100%; padding:16px; margin:12px 0;">APPLY RENAME</button>
+            
+            <div class="section">
+                <div class="section-title">RESULT</div>
+                <textarea id="rename-output" class="input" rows="6" readonly></textarea>
+            </div>
+            
+            <button onclick="copyRenamed()" class="btn btn-secondary" style="width:100%; padding:14px;">COPY RENAMED</button>
+        </div>
+        
+        <!-- TOOLS TAB -->
+        <div id="panel-tools" class="tab-panel">
+            <div class="section">
+                <div class="section-title">DEDUPLICATOR &amp; SORTER</div>
+                <textarea id="dedup-input" class="input" rows="5" placeholder="Paste mixed configs..."></textarea>
+                <div style="display:flex; gap:8px; margin-top:8px; flex-wrap:wrap;">
+                    <button onclick="doDedup()" class="btn btn-secondary" style="flex:1; padding:10px; font-size:0.82rem;">Remove Dupes</button>
+                    <button onclick="doSort('az')" class="btn btn-secondary" style="flex:1; padding:10px; font-size:0.82rem;">Sort A-Z</button>
+                    <button onclick="doSort('shuffle')" class="btn btn-secondary" style="flex:1; padding:10px; font-size:0.82rem;">Shuffle</button>
+                </div>
+                <textarea id="dedup-result" class="input" rows="4" readonly style="margin-top:10px;"></textarea>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">NAME EXTRACTOR</div>
+                <textarea id="extract-input" class="input" rows="4" placeholder="Paste configs to extract names..."></textarea>
+                <button onclick="doExtractNames()" class="btn btn-secondary" style="width:100%; margin-top:8px; padding:11px;">Extract Names</button>
+                <textarea id="extract-result" class="input" rows="3" readonly style="margin-top:8px;"></textarea>
             </div>
         </div>
-
-        <!-- Main inputs -->
-        <div class="input-group">
-            <label>Netlify Domain <small>your-project.netlify.app</small></label>
-            <input id="main-host" placeholder="example.netlify.app" type="text">
-        </div>
-
-        <div class="input-group">
-            <label>SNI Domains</label>
-            <textarea id="domain-list" rows="5" placeholder="Enter one domain per line..."></textarea>
-            <div class="action-bar">
-                <button class="btn-small" onclick="loadDefaultDomains('cncf')">CNCF / K8s</button>
-                <button class="btn-small" onclick="loadDefaultDomains('popular')">Popular Bypass</button>
-                <button class="btn-small" onclick="loadDefaultDomains('cloudflare')">Cloudflare</button>
-                <button class="btn-small" onclick="document.getElementById('domain-list').value=''">Clear</button>
-                <button class="btn-small" onclick="pasteToArea('domain-list')">Paste</button>
-            </div>
-        </div>
-
-        <div class="input-group" id="ip-group">
-            <label>IP Addresses</label>
-            <textarea id="ip-list" rows="4" placeholder="Enter one IP per line..."></textarea>
-            <div class="action-bar">
-                <button class="btn-small" onclick="loadDefaultIps()">Shecan Default</button>
-                <button class="btn-small" onclick="document.getElementById('ip-list').value=''">Clear</button>
-                <button class="btn-small" onclick="pasteToArea('ip-list')">Paste</button>
-            </div>
-        </div>
-
-        <!-- Live stats -->
-        <div id="live-stats" class="stats">
-            <div>Configs will generate: <strong id="config-count">0</strong></div>
-            <div id="mode-indicator">Mode: IP + SNI</div>
-        </div>
-
-        <button class="gen-btn" onclick="generateConfigs()">
-            ⚡️ GENERATE VLESS CONFIGS ⚡️
-        </button>
-
-        <!-- Output -->
-        <div id="output-container" style="display:none;">
-            <textarea id="result-area" readonly></textarea>
-            <div class="output-actions">
-                <button class="copy-btn" onclick="copyConfigs()">📋 COPY ALL</button>
-                <button class="download-btn" onclick="downloadConfigs()">⬇️ DOWNLOAD .TXT</button>
-                <button class="share-btn" onclick="shareConfigs()">🔗 SHARE LINK</button>
-            </div>
-        </div>
+        
     </div>
-
-    <!-- Toast -->
+    
     <div class="toast" id="toast"></div>
-
+    
     <script>
-        // ==================== STATE ====================
         let netlifyMode = 'shecan';
         let configMode = 'default';
-        let showAdvanced = true;
-
-        // Default data
-        const defaultLists = {
-            cncf: ["helm.sh","keda.sh","rook.io","istio.io","cilium.io","fluxcd.io","harbor.io","calico.org","linkerd.io","openebs.io","tekton.dev","longhorn.io","kubernetes.io","cert-manager.io","letsencrypt.org"],
-            popular: ["discord.com","github.com","cloudflare.com","akamai.com","fastly.net","googleapis.com","gstatic.com","youtube.com","netflix.com","openai.com"],
-            cloudflare: ["one.one.one.one","cloudflare.com","cdnjs.cloudflare.com","static.cloudflareinsights.com"]
+        
+        const sniCategories = {
+            all: ["helm.sh","blog.helm.sh","docs.helm.sh","kubernetes.io","kubectl.docs.kubernetes.io","kubebuilder.io","operatorframework.io","kind.sigs.k8s.io","kops.sigs.k8s.io","krew.sigs.k8s.io","kwok.sigs.k8s.io","kueue.sigs.k8s.io","jobset.sigs.k8s.io","kaniko.sigs.k8s.io","minikube.sigs.k8s.io","kustomize.sigs.k8s.io","cluster-api.sigs.k8s.io","descheduler.sigs.k8s.io","gateway-api.sigs.k8s.io","external-dns.sigs.k8s.io","service-apis.sigs.k8s.io","image-builder.sigs.k8s.io","metrics-server.sigs.k8s.io","scheduler-plugins.sigs.k8s.io","controller-runtime.sigs.k8s.io","prometheus-operator.sigs.k8s.io","node-feature-discovery.sigs.k8s.io","hierarchical-namespaces.sigs.k8s.io","secrets-store-csi-driver.sigs.k8s.io","security-profiles-operator.sigs.k8s.io","cluster-proportional-autoscaler.sigs.k8s.io","container.sigs.k8s.io","istio.io","cilium.io","linkerd.io","calico.org","rook.io","openebs.io","longhorn.io","fluxcd.io","argo-cd.readthedocs.io","tekton.dev","cert-manager.io","letsencrypt.org","keda.sh","crossplane.io","harbor.io"],
+            helm: ["helm.sh","blog.helm.sh","docs.helm.sh"],
+            k8s_core: ["kubernetes.io","kubectl.docs.kubernetes.io","kubebuilder.io","operatorframework.io"],
+            sigs: ["kind.sigs.k8s.io","kops.sigs.k8s.io","krew.sigs.k8s.io","kwok.sigs.k8s.io","kueue.sigs.k8s.io","jobset.sigs.k8s.io","kaniko.sigs.k8s.io","minikube.sigs.k8s.io","kustomize.sigs.k8s.io","cluster-api.sigs.k8s.io","descheduler.sigs.k8s.io","gateway-api.sigs.k8s.io","external-dns.sigs.k8s.io","service-apis.sigs.k8s.io","image-builder.sigs.k8s.io","metrics-server.sigs.k8s.io","scheduler-plugins.sigs.k8s.io","controller-runtime.sigs.k8s.io","prometheus-operator.sigs.k8s.io","node-feature-discovery.sigs.k8s.io","hierarchical-namespaces.sigs.k8s.io","secrets-store-csi-driver.sigs.k8s.io","security-profiles-operator.sigs.k8s.io","cluster-proportional-autoscaler.sigs.k8s.io","container.sigs.k8s.io"],
+            mesh: ["istio.io","cilium.io","linkerd.io","calico.org","gateway-api.sigs.k8s.io"],
+            storage: ["rook.io","openebs.io","longhorn.io"],
+            gitops: ["fluxcd.io","argo-cd.readthedocs.io","tekton.dev"],
+            security: ["cert-manager.io","letsencrypt.org","secrets-store-csi-driver.sigs.k8s.io","security-profiles-operator.sigs.k8s.io"],
+            platform: ["keda.sh","crossplane.io","harbor.io"]
         };
-
+        
         const defaultIps = ["50.7.5.83","50.7.5.85","144.76.1.88","216.24.57.1","94.130.13.19","178.22.122.101","185.53.177.50"];
-
-        // ==================== CORE FUNCTIONS ====================
+        
+        function switchMainTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach((b, i) => b.classList.toggle('active', i === tab));
+            document.querySelectorAll('.tab-panel').forEach((p, i) => p.classList.toggle('active', i === tab));
+        }
+        
         function setNetlifyMode(mode) {
             netlifyMode = mode;
-            document.querySelectorAll('#netlify-options .sub-tab-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById(`btn-${mode}`).classList.add('active');
-            document.getElementById('ip-group').style.display = mode === 'shecan' ? 'block' : 'none';
+            document.getElementById('mode-shecan').classList.toggle('btn-primary', mode === 'shecan');
+            document.getElementById('mode-shecan').classList.toggle('btn-secondary', mode !== 'shecan');
+            document.getElementById('mode-normal').classList.toggle('btn-primary', mode === 'normal');
+            document.getElementById('mode-normal').classList.toggle('btn-secondary', mode !== 'normal');
+            document.getElementById('ip-section').style.display = mode === 'shecan' ? 'block' : 'none';
             updateLiveStats();
         }
-
+        
         function setConfigMode(mode) {
             configMode = mode;
-            document.querySelectorAll('#netlify-config-type .sub-tab-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById(`btn-${mode}`).classList.add('active');
             document.getElementById('custom-settings').style.display = mode === 'custom' ? 'block' : 'none';
+            document.getElementById('type-default').classList.toggle('btn-primary', mode === 'default');
+            document.getElementById('type-default').classList.toggle('btn-secondary', mode !== 'default');
+            document.getElementById('type-custom').classList.toggle('btn-primary', mode === 'custom');
+            document.getElementById('type-custom').classList.toggle('btn-secondary', mode !== 'custom');
         }
-
-        function toggleAdvanced() {
-            showAdvanced = !showAdvanced;
-            document.getElementById('extra-params').style.display = showAdvanced ? 'flex' : 'none';
-        }
-
-        function loadDefaultDomains(type) {
-            document.getElementById('domain-list').value = defaultLists[type].join('\n');
+        
+        function loadSniCategory(category, btn) {
+            const textarea = document.getElementById('domain-list');
+            textarea.value = sniCategories[category].join('\n');
             updateLiveStats();
+            
+            // Remove active from all buttons
+            document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+            
+            // Add active to the clicked button
+            if (btn) {
+                btn.classList.add('active');
+            } else {
+                // Fallback: find button by category
+                const buttons = document.querySelectorAll('.category-btn');
+                buttons.forEach(b => {
+                    if (b.onclick && b.onclick.toString().includes(category)) {
+                        b.classList.add('active');
+                    }
+                });
+            }
         }
-
+        
         function loadDefaultIps() {
             document.getElementById('ip-list').value = defaultIps.join('\n');
             updateLiveStats();
         }
-
+        
         function pasteToArea(id) {
             navigator.clipboard.readText().then(text => {
-                const area = document.getElementById(id);
-                area.value = area.value.trim() ? area.value + '\n' + text.trim() : text.trim();
+                const el = document.getElementById(id);
+                el.value = (el.value.trim() ? el.value + '\n' : '') + text.trim();
                 updateLiveStats();
-            });
+            }).catch(() => showToast("Clipboard access denied", true));
         }
-
-        function generateRandomUUID() {
-            const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
-                const r = Math.random() * 16 | 0;
-                return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-            });
-            document.getElementById('custom-user').value = uuid;
-        }
-
+        
         function updateLiveStats() {
-            const domainsText = document.getElementById('domain-list').value.trim();
-            const domains = domainsText ? domainsText.split('\n').map(d => d.trim()).filter(Boolean) : [];
+            const domains = document.getElementById('domain-list').value.trim().split('\n').filter(Boolean);
             let count = domains.length;
-
             if (netlifyMode === 'shecan') {
-                const ipsText = document.getElementById('ip-list').value.trim();
-                const ips = ipsText ? ipsText.split('\n').map(i => i.trim()).filter(Boolean) : [1];
-                count *= ips.length;
+                const ips = document.getElementById('ip-list').value.trim().split('\n').filter(Boolean);
+                count *= Math.max(ips.length, 1);
             }
-
             document.getElementById('config-count').textContent = count || 0;
-            document.getElementById('mode-indicator').textContent = `Mode: ${netlifyMode === 'shecan' ? 'IP + SNI' : 'Direct SNI'}`;
+            document.getElementById('mode-text').textContent = `Mode: ${netlifyMode === 'shecan' ? 'IP + SNI' : 'Direct SNI'}`;
         }
-
+        
         function generateConfigs() {
             const host = document.getElementById('main-host').value.trim() || "example.netlify.app";
-            const domainsText = document.getElementById('domain-list').value.trim();
+            const domains = document.getElementById('domain-list').value.trim().split('\n').filter(Boolean);
             
-            if (!domainsText) {
-                showToast("❌ Please enter at least one SNI domain!", true);
-                return;
-            }
-
-            const domains = domainsText.split('\n').map(d => d.trim()).filter(Boolean);
+            if (!domains.length) { showToast("Please enter at least one SNI domain", true); return; }
+            
             let uuid = "Telegram-Parsashonam";
             let path = "/p4r34m";
-
+            let fp = "chrome";
+            let alpn = "h2,http/1.1";
+            
             if (configMode === 'custom') {
                 uuid = document.getElementById('custom-user').value.trim() || uuid;
                 path = document.getElementById('custom-path').value.trim() || path;
+                fp = document.getElementById('fingerprint').value;
+                alpn = document.getElementById('alpn').value;
             }
-
-            const fp = document.getElementById('fingerprint') ? document.getElementById('fingerprint').value : "chrome";
-            const alpn = document.getElementById('alpn-select') ? document.getElementById('alpn-select').value : "h2,http/1.1";
-
+            
             let configs = [];
-
             if (netlifyMode === 'shecan') {
-                const ipsText = document.getElementById('ip-list').value.trim();
-                const ips = ipsText ? ipsText.split('\n').map(i => i.trim()).filter(Boolean) : ["50.7.5.83"];
-
-                domains.forEach(sni => {
-                    ips.forEach(ip => {
-                        let config = `vless://${uuid}@${ip}:443?encryption=none&security=tls&sni=${sni}&alpn=${alpn}&fp=${fp}&insecure=1&type=xhttp&host=${host}&path=${path}#IR_NETLIFY_${sni}`;
-                        configs.push(config);
-                    });
-                });
+                const ips = document.getElementById('ip-list').value.trim().split('\n').filter(Boolean);
+                if (!ips.length) { showToast("Please enter at least one IP for Shecan mode", true); return; }
+                domains.forEach(sni => ips.forEach(ip => {
+                    configs.push(`vless://${uuid}@${ip}:443?encryption=none&security=tls&sni=${sni}&alpn=${alpn}&fp=${fp}&insecure=1&type=xhttp&host=${host}&path=${path}#IR_NETLIFY_${sni}`);
+                }));
             } else {
                 domains.forEach(sni => {
-                    let config = `vless://${uuid}@${sni}:443?encryption=none&security=tls&sni=${sni}&alpn=${alpn}&fp=${fp}&type=xhttp&host=${host}&path=${path}#IR_NETLIFY_${sni}`;
-                    configs.push(config);
+                    configs.push(`vless://${uuid}@${sni}:443?encryption=none&security=tls&sni=${sni}&alpn=${alpn}&fp=${fp}&type=xhttp&host=${host}&path=${path}#IR_NETLIFY_${sni}`);
                 });
             }
-
-            const resultArea = document.getElementById('result-area');
-            resultArea.value = configs.join('\n\n');
+            
+            document.getElementById('result-area').value = configs.join('\n\n');
             document.getElementById('output-container').style.display = 'block';
-            
-            // Auto scroll to output
-            resultArea.scrollIntoView({ behavior: "smooth" });
-            
-            showToast(`✅ Generated ${configs.length} ultra-fast configs!`, false);
+            showToast(`✅ Generated ${configs.length} configs!`);
         }
-
-        function copyConfigs() {
-            const text = document.getElementById('result-area').value;
-            if (!text) return;
-            navigator.clipboard.writeText(text).then(() => {
-                showToast("📋 All configs copied to clipboard!", false);
-            });
-        }
-
-        function downloadConfigs() {
-            const text = document.getElementById('result-area').value;
-            if (!text) return;
-            const blob = new Blob([text], { type: 'text/plain' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `IR_NETLIFY_V10_${new Date().toISOString().slice(0,19).replace(/[:T]/g, '-')}.txt`;
-            a.click();
-            URL.revokeObjectURL(url);
-            showToast("⬇️ Downloaded successfully!", false);
-        }
-
-        function shareConfigs() {
+        
+        function generateBalancedJSON() {
             const host = document.getElementById('main-host').value.trim();
-            const domains = document.getElementById('domain-list').value.trim();
-            const ips = document.getElementById('ip-list').value.trim();
+            const domains = document.getElementById('domain-list').value.trim().split('\n').filter(Boolean);
+            const ips = netlifyMode === 'shecan' ? document.getElementById('ip-list').value.trim().split('\n').filter(Boolean) : [];
             
-            const data = {
-                host: host || "example.netlify.app",
-                domains: domains,
-                ips: ips,
-                mode: netlifyMode,
-                configMode: configMode,
-                uuid: configMode === 'custom' ? document.getElementById('custom-user').value : "",
-                path: configMode === 'custom' ? document.getElementById('custom-path').value : ""
+            let proxies = [];
+            if (netlifyMode === 'shecan') {
+                domains.forEach((sni, i) => ips.forEach((ip, j) => proxies.push({name: `Node-${i}-${j}`, address: ip, sni})));
+            } else {
+                domains.forEach((d, i) => proxies.push({name: `Node-${i}`, address: d, sni: d}));
+            }
+            
+            const json = {
+                outbounds: proxies.map(p => ({
+                    type: "vless", tag: p.name, server: p.address, server_port: 443,
+                    uuid: "Telegram-Parsashonam",
+                    tls: { enabled: true, server_name: p.sni, insecure: true },
+                    transport: { type: "xhttp", host: host || "example.netlify.app", path: "/p4r34m" }
+                }))
             };
             
-            const encoded = btoa(JSON.stringify(data));
-            const shareUrl = `${window.location.origin}${window.location.pathname}?import=${encoded}`;
-            
-            navigator.clipboard.writeText(shareUrl).then(() => {
-                showToast("🔗 Shareable link copied! Send to friends", false);
-            });
+            const blob = new Blob([JSON.stringify(json, null, 2)], {type: "application/json"});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url; a.download = "balanced-config.json"; a.click();
+            URL.revokeObjectURL(url);
+            showToast("Balanced JSON downloaded");
         }
-
-        function showToast(msg, isError) {
+        
+        function copyConfigs() {
+            navigator.clipboard.writeText(document.getElementById('result-area').value).then(() => showToast("📋 Copied!"));
+        }
+        
+        function downloadConfigs() {
+            const text = document.getElementById('result-area').value;
+            const blob = new Blob([text], {type: "text/plain"});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url; a.download = `IR_NETLIFY_V10_${Date.now()}.txt`; a.click();
+            URL.revokeObjectURL(url);
+        }
+        
+        function shareConfigs() {
+            const data = {
+                host: document.getElementById('main-host').value,
+                domains: document.getElementById('domain-list').value,
+                ips: document.getElementById('ip-list').value,
+                mode: netlifyMode, configMode: configMode
+            };
+            const url = `${location.origin}${location.pathname}?import=${btoa(JSON.stringify(data))}`;
+            navigator.clipboard.writeText(url).then(() => showToast("🔗 Share link copied!"));
+        }
+        
+        function applyRenamePreset(type) {
+            const input = document.getElementById('rename-input');
+            if (!input.value.trim()) { showToast("Please paste configs first", true); return; }
+            
+            let prefix = "";
+            if (type === 'ww') prefix = "ww ";
+            if (type === 'iran') prefix = "🇮🇷 Iran ";
+            if (type === 'rocket') prefix = "🚀 Fast ";
+            if (type === 'clean') {
+                const lines = input.value.split('\n').map(l => l.includes('#') ? l.split('#')[0] : l);
+                document.getElementById('rename-output').value = lines.join('\n');
+                return;
+            }
+            
+            const result = input.value.split('\n').map((line, i) => {
+                const base = line.includes('#') ? line.split('#')[0] : line;
+                return `${base}#${prefix}${i+1}`;
+            });
+            document.getElementById('rename-output').value = result.join('\n');
+        }
+        
+        function applyRename() {
+            const input = document.getElementById('rename-input').value.trim();
+            if (!input) return;
+            const prefix = document.getElementById('r-prefix').value;
+            const suffix = document.getElementById('r-suffix').value;
+            const fragment = document.getElementById('r-fragment').value;
+            
+            const result = input.split('\n').map((line, i) => {
+                const base = line.includes('#') ? line.split('#')[0] : line;
+                const frag = fragment ? fragment.replace('{n}', i+1) : `${prefix}${i+1}${suffix}`;
+                return `${base}#${frag}`;
+            });
+            document.getElementById('rename-output').value = result.join('\n');
+        }
+        
+        function copyRenamed() {
+            navigator.clipboard.writeText(document.getElementById('rename-output').value).then(() => showToast("Copied!"));
+        }
+        
+        function doDedup() {
+            const lines = document.getElementById('dedup-input').value.trim().split('\n').filter(Boolean);
+            const unique = [...new Set(lines)];
+            document.getElementById('dedup-result').value = unique.join('\n');
+            showToast(`Removed ${lines.length - unique.length} duplicates`);
+        }
+        
+        function doSort(mode) {
+            let lines = document.getElementById('dedup-input').value.trim().split('\n').filter(Boolean);
+            if (mode === 'az') lines.sort();
+            if (mode === 'shuffle') lines.sort(() => Math.random() - 0.5);
+            document.getElementById('dedup-result').value = lines.join('\n');
+        }
+        
+        function doExtractNames() {
+            const lines = document.getElementById('extract-input').value.trim().split('\n');
+            const names = lines.map(l => l.includes('#') ? decodeURIComponent(l.split('#')[1]) : '').filter(Boolean);
+            document.getElementById('extract-result').value = names.join('\n');
+        }
+        
+        function showToast(msg, error = false) {
             const toast = document.getElementById('toast');
             toast.textContent = msg;
-            toast.style.color = isError ? '#ff6b00' : 'var(--neon-cyan)';
+            toast.style.color = error ? '#ff6b00' : '#ffffff';
             toast.style.display = 'flex';
-            setTimeout(() => {
-                toast.style.display = 'none';
-            }, 2800);
+            setTimeout(() => toast.style.display = 'none', 2600);
         }
-
-        function confettiBurst() {
-            showToast("⚡️ BACHELOR MODE MAXED OUT", false);
-            // Simple confetti using canvas
-            const canvas = document.createElement('canvas');
-            canvas.style.position = 'fixed';
-            canvas.style.top = '0';
-            canvas.style.left = '0';
-            canvas.style.width = '100%';
-            canvas.style.height = '100%';
-            canvas.style.zIndex = '99999';
-            canvas.style.pointerEvents = 'none';
-            document.body.appendChild(canvas);
-            
-            const ctx = canvas.getContext('2d');
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            
-            const colors = ['#00f0ff', '#c300ff', '#00ff9d', '#ff6b00'];
-            const pieces = [];
-            
-            for (let i = 0; i < 280; i++) {
-                pieces.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height - canvas.height,
-                    r: Math.random() * 8 + 4,
-                    d: Math.random() * 3 + 1,
-                    color: colors[Math.floor(Math.random() * colors.length)],
-                    tilt: Math.random() * 20 - 10,
-                    tiltAngle: 0
-                });
-            }
-            
-            let animationFrame;
-            function animate() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                let stillAlive = false;
-                
-                pieces.forEach(p => {
-                    p.tiltAngle += 0.1;
-                    p.y += (p.d + 3);
-                    p.tilt = Math.sin(p.tiltAngle) * 15;
-                    
-                    ctx.beginPath();
-                    ctx.lineWidth = p.r / 2;
-                    ctx.strokeStyle = p.color;
-                    ctx.moveTo(p.x + p.tilt, p.y);
-                    ctx.lineTo(p.x + p.tilt + p.r, p.y + p.r);
-                    ctx.stroke();
-                    
-                    if (p.y < canvas.height) stillAlive = true;
-                });
-                
-                if (stillAlive) {
-                    animationFrame = requestAnimationFrame(animate);
-                } else {
-                    cancelAnimationFrame(animationFrame);
-                    canvas.remove();
-                }
-            }
-            animate();
-            
-            setTimeout(() => {
-                if (canvas.parentNode) canvas.remove();
-            }, 4500);
-        }
-
-        // ==================== INITIALIZATION ====================
-        function loadFromShareLink() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const importData = urlParams.get('import');
-            if (!importData) return;
-            
-            try {
-                const data = JSON.parse(atob(importData));
-                document.getElementById('main-host').value = data.host || "";
-                document.getElementById('domain-list').value = data.domains || "";
-                if (data.ips) document.getElementById('ip-list').value = data.ips;
-                
-                if (data.mode) setNetlifyMode(data.mode);
-                if (data.configMode) {
-                    setConfigMode(data.configMode);
-                    if (data.configMode === 'custom') {
-                        if (data.uuid) document.getElementById('custom-user').value = data.uuid;
-                        if (data.path) document.getElementById('custom-path').value = data.path;
-                    }
-                }
-                showToast("✅ Imported shared configuration!", false);
-                // Auto generate
-                setTimeout(() => generateConfigs(), 800);
-            } catch(e) {}
-        }
-
-        window.onload = () => {
-            // Load defaults
-            loadDefaultDomains('cncf');
-            loadDefaultIps();
-            
-            // Set initial modes
+        
+        function init() {
             setNetlifyMode('shecan');
             setConfigMode('default');
+            loadSniCategory('all');
+            loadDefaultIps();
             
-            // Live stats on input
-            const inputs = document.querySelectorAll('input, textarea');
-            inputs.forEach(input => {
-                input.addEventListener('input', updateLiveStats);
+            ['domain-list', 'ip-list'].forEach(id => {
+                document.getElementById(id).addEventListener('input', updateLiveStats);
             });
             
-            // Load any shared link
-            loadFromShareLink();
+            const params = new URLSearchParams(location.search);
+            if (params.get('import')) {
+                try {
+                    const data = JSON.parse(atob(params.get('import')));
+                    document.getElementById('main-host').value = data.host || '';
+                    document.getElementById('domain-list').value = data.domains || '';
+                    if (data.ips) document.getElementById('ip-list').value = data.ips;
+                    if (data.mode) setNetlifyMode(data.mode);
+                    if (data.configMode) setConfigMode(data.configMode);
+                    showToast("✅ Shared config loaded!");
+                } catch(e) {}
+            }
             
-            console.log('%c✅ IR NETLIFY V10 ULTIMATE BACHELOR EDITION loaded successfully', 'color:#00f0ff;font-weight:700;font-size:13px');
-        };
+            updateLiveStats();
+        }
+        
+        window.onload = init;
     </script>
 </body>
 </html>
