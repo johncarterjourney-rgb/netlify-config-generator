@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=450" />
-    <title>IR NETLIFY V10 • BACHELOR EDITION ⚡️</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IR NETLIFY V10.2 • BACHELOR EDITION</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap');
         
@@ -13,8 +13,7 @@
             --surface: #161616;
             --border: #333333;
             --text: #f5f5f5;
-            --text-dim: #aaaaaa;
-            --accent: #ffffff;
+            --accent: #00ff9d;
         }
         
         * { margin:0; padding:0; box-sizing:border-box; }
@@ -28,7 +27,7 @@
         }
         
         .container {
-            max-width: 520px;
+            max-width: 640px;
             margin: 0 auto;
             background: var(--surface);
             border: 1px solid var(--border);
@@ -43,19 +42,19 @@
         }
         
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.85rem;
             font-weight: 800;
-            color: var(--text);
-            letter-spacing: -1px;
+            color: var(--accent);
         }
         
         .version {
-            font-size: 0.65rem;
-            background: #ffffff;
+            font-size: 0.68rem;
+            background: #00ff9d;
             color: #000;
-            padding: 1px 8px;
+            padding: 1px 7px;
             border-radius: 999px;
             font-weight: 800;
+            margin-left: 5px;
         }
         
         .tabs {
@@ -63,26 +62,26 @@
             background: #111;
             border-radius: 9999px;
             padding: 4px;
-            margin: 20px 0;
+            margin: 16px 0;
             border: 1px solid var(--border);
         }
         
         .tab-btn {
             flex: 1;
-            padding: 12px 16px;
+            padding: 11px 14px;
             border: none;
             background: transparent;
-            color: var(--text-dim);
+            color: #888;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             border-radius: 9999px;
             transition: all 0.3s;
         }
         
         .tab-btn.active {
-            background: #ffffff;
+            background: #00ff9d;
             color: #000;
-            font-weight: 700;
+            font-weight: 800;
         }
         
         .section {
@@ -91,218 +90,222 @@
         
         .section-title {
             font-size: 0.78rem;
-            color: var(--text-dim);
+            color: #00ff9d;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 7px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
         .input {
             width: 100%;
-            padding: 13px 16px;
+            padding: 11px 14px;
             background: #111;
             border: 1px solid var(--border);
-            border-radius: 14px;
+            border-radius: 11px;
             color: var(--text);
-            font-size: 0.95rem;
-            margin-bottom: 10px;
+            font-size: 0.92rem;
+            margin-bottom: 9px;
         }
         
         .btn {
-            padding: 12px 18px;
-            border-radius: 14px;
+            padding: 10px 16px;
+            border-radius: 11px;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             cursor: pointer;
             transition: all 0.3s;
             border: none;
         }
         
         .btn-primary {
-            background: #ffffff;
+            background: #00ff9d;
             color: #000;
         }
         
         .btn-secondary {
             background: transparent;
-            border: 2px solid #666;
-            color: var(--text-dim);
+            border: 2px solid #555;
+            color: #ccc;
         }
         
-        .category-btn {
-            padding: 9px 10px;
-            font-size: 0.72rem;
-            background: #1f1f1f;
-            border: 1px solid var(--border);
-            color: var(--text-dim);
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-align: center;
-        }
-        
-        .category-btn.all {
-            background: #ffffff;
-            color: #000;
-            font-weight: 700;
-            border: none;
-        }
-        
-        .category-btn.active {
-            background: #ffffff;
-            color: #000;
-            border-color: #ffffff;
-        }
-        
-        .output {
-            margin-top: 20px;
-            display: none;
-        }
-        
-        #result-area {
-            width: 100%;
-            min-height: 260px;
-            background: #111;
-            border: 2px solid var(--border);
-            border-radius: 16px;
-            padding: 14px;
-            color: #00ff9d;
-            font-family: monospace;
-            font-size: 0.88rem;
-            line-height: 1.4;
-            resize: vertical;
-        }
-        
-        .stats-bar {
-            background: #111;
-            padding: 9px 14px;
-            border-radius: 12px;
+        .domain-row {
             display: flex;
-            justify-content: space-between;
-            font-size: 0.82rem;
-            margin: 12px 0;
-            border: 1px solid var(--border);
+            gap: 6px;
+            margin-bottom: 6px;
+            align-items: center;
+        }
+        
+        .domain-row input {
+            flex: 1;
+            padding: 9px 12px;
+            background: #111;
+            border: 1px solid #444;
+            border-radius: 9px;
+            color: #fff;
+            font-size: 0.88rem;
         }
         
         .toast {
             position: fixed;
-            bottom: 20px;
+            bottom: 18px;
             left: 50%;
             transform: translateX(-50%);
             background: #222;
             color: #fff;
-            padding: 12px 26px;
+            padding: 11px 24px;
             border-radius: 9999px;
             box-shadow: 0 0 25px rgba(0,0,0,0.5);
             display: none;
             z-index: 9999;
             font-weight: 600;
         }
+        
+        .output {
+            margin-top: 14px;
+            display: none;
+        }
+        
+        #result-area, #replacer-result, #tools-result {
+            width: 100%;
+            min-height: 200px;
+            background: #111;
+            border: 2px solid #00ff9d;
+            border-radius: 12px;
+            padding: 12px;
+            color: #00ff9d;
+            font-family: monospace;
+            font-size: 0.82rem;
+            line-height: 1.45;
+            resize: vertical;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">IR NETLIFY <span class="version">V10</span></div>
-            <div style="color:#888; font-size:0.8rem; margin-top:4px;">BACHELOR EDITION • BLACK &amp; WHITE</div>
+            <div class="logo">IR NETLIFY <span class="version">V10.2</span></div>
+            <div style="color:#888; font-size:0.72rem; margin-top:3px;">BACHELOR EDITION</div>
         </div>
         
         <div class="tabs">
-            <button onclick="switchTab(0)" class="tab-btn active" id="tab0">⚡ Netlify</button>
-            <button onclick="switchTab(1)" class="tab-btn" id="tab1">✎ Tools</button>
+            <button onclick="switchTab(0)" class="tab-btn active" id="tab0">⚡ Generator</button>
+            <button onclick="switchTab(1)" class="tab-btn" id="tab1">🔄 Replacer</button>
+            <button onclick="switchTab(2)" class="tab-btn" id="tab2">🔧 Tools</button>
         </div>
         
-        <!-- NETLIFY TAB -->
-        <div id="panel-netlify">
+        <!-- TAB 0: GENERATOR -->
+        <div id="panel-generator">
             <div class="section">
-                <div class="section-title">MODE</div>
-                <div style="display:flex; gap:8px; margin-bottom:14px;">
-                    <button onclick="setNetlifyMode('shecan')" id="mode-shecan" class="btn btn-primary" style="flex:1; padding:11px 0; font-size:0.88rem;">IP + SNI (Shecan)</button>
-                    <button onclick="setNetlifyMode('normal')" id="mode-normal" class="btn btn-secondary" style="flex:1; padding:11px 0; font-size:0.88rem;">Direct SNI</button>
+                <div class="section-title">Mode</div>
+                <div style="display:flex; gap:6px; margin-bottom:12px;">
+                    <button onclick="setNetlifyMode('shecan')" id="mode-shecan" class="btn btn-primary" style="flex:1; padding:9px 0; font-size:0.82rem;">IP + SNI</button>
+                    <button onclick="setNetlifyMode('normal')" id="mode-normal" class="btn btn-secondary" style="flex:1; padding:9px 0; font-size:0.82rem;">Direct SNI</button>
                 </div>
             </div>
             
             <div class="section">
-                <div class="section-title">SERVER TYPE</div>
-                <div style="display:flex; gap:8px; margin-bottom:14px;">
-                    <button onclick="setConfigMode('default')" id="type-default" class="btn btn-secondary" style="flex:1; padding:10px 0; font-size:0.82rem;">Parsa / Xarheon Server</button>
-                    <button onclick="setConfigMode('custom')" id="type-custom" class="btn btn-secondary" style="flex:1; padding:10px 0; font-size:0.82rem;">Custom Server</button>
+                <div class="section-title">Server Type</div>
+                <div style="display:flex; gap:6px; margin-bottom:12px;">
+                    <button onclick="setConfigMode('default')" id="type-default" class="btn btn-secondary" style="flex:1; padding:8px 0; font-size:0.78rem;">Parsa / Xarheon</button>
+                    <button onclick="setConfigMode('custom')" id="type-custom" class="btn btn-secondary" style="flex:1; padding:8px 0; font-size:0.78rem;">Custom</button>
                 </div>
             </div>
             
-            <div id="custom-settings" style="display:none; background:#1a1a1a; border:1px dashed #555; padding:14px; border-radius:14px; margin-bottom:16px;">
-                <div class="section-title" style="color:#ccc;">CUSTOM PARAMETERS</div>
-                <input id="custom-user" class="input" placeholder="Custom UUID">
-                <input id="custom-path" class="input" placeholder="Custom Path (e.g. /p4r34m)">
+            <!-- Multiple Netlify Domains -->
+            <div class="section">
+                <div class="section-title">Netlify Domains (Multiple)</div>
+                <div id="gen-domain-container"></div>
+                <div style="display:flex; gap:6px; margin-top:6px;">
+                    <button onclick="addGenDomain()" class="btn btn-secondary" style="flex:1; padding:7px; font-size:0.75rem;">+ Add</button>
+                    <button onclick="clearGenDomains()" class="btn btn-secondary" style="flex:1; padding:7px; font-size:0.75rem;">Clear All</button>
+                </div>
             </div>
             
             <div class="section">
-                <div class="section-title">NETLIFY DOMAIN</div>
-                <input id="main-host" class="input" placeholder="your-project.netlify.app" value="example.netlify.app">
-            </div>
-            
-            <div class="section">
-                <div class="section-title">SNI DOMAINS</div>
-                
-                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(82px, 1fr)); gap:6px; margin-bottom:10px;">
-                    <button onclick="loadSniCategory('all', this)" class="category-btn all">🌐 ALL</button>
-                    <button onclick="loadSniCategory('best', this)" class="category-btn">⭐ BEST</button>
-                    <button onclick="loadSniCategory('helm', this)" class="category-btn">⎈ Helm</button>
-                    <button onclick="loadSniCategory('k8s', this)" class="category-btn">☸️ K8s</button>
-                    <button onclick="loadSniCategory('sigs', this)" class="category-btn">🔧 SIGs</button>
-                    <button onclick="loadSniCategory('mesh', this)" class="category-btn">🕸️ Mesh</button>
-                    <button onclick="loadSniCategory('storage', this)" class="category-btn">💾 Storage</button>
-                    <button onclick="loadSniCategory('gitops', this)" class="category-btn">🔄 GitOps</button>
-                    <button onclick="loadSniCategory('security', this)" class="category-btn">🔒 Security</button>
+                <div class="section-title">SNI Domains</div>
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(68px, 1fr)); gap:5px; margin-bottom:8px;">
+                    <button onclick="loadSniCategory('all', this)" class="btn btn-secondary" style="padding:6px; font-size:0.7rem;">ALL</button>
+                    <button onclick="loadSniCategory('best', this)" class="btn btn-secondary" style="padding:6px; font-size:0.7rem;">BEST</button>
+                    <button onclick="loadSniCategory('helm', this)" class="btn btn-secondary" style="padding:6px; font-size:0.7rem;">Helm</button>
+                    <button onclick="loadSniCategory('k8s', this)" class="btn btn-secondary" style="padding:6px; font-size:0.7rem;">K8s</button>
                 </div>
-                
-                <textarea id="domain-list" class="input" rows="5" placeholder="One domain per line..."></textarea>
-                
-                <div style="display:flex; gap:8px; margin-top:6px;">
-                    <button onclick="document.getElementById('domain-list').value=''" class="btn btn-secondary" style="flex:1; padding:8px; font-size:0.78rem;">Clear</button>
-                    <button onclick="pasteToArea('domain-list')" class="btn btn-secondary" style="flex:1; padding:8px; font-size:0.78rem;">Paste</button>
-                </div>
+                <textarea id="domain-list" class="input" rows="3" placeholder="One SNI per line..."></textarea>
             </div>
             
             <div class="section" id="ip-section">
-                <div class="section-title">IP ADDRESSES (Shecan Mode)</div>
-                <textarea id="ip-list" class="input" rows="4" placeholder="One IP per line..."></textarea>
-                <div style="display:flex; gap:8px; margin-top:6px;">
-                    <button onclick="loadDefaultIps()" class="btn btn-secondary" style="flex:1; padding:8px; font-size:0.78rem;">Load Shecan IPs</button>
-                    <button onclick="document.getElementById('ip-list').value=''" class="btn btn-secondary" style="flex:0.7; padding:8px; font-size:0.78rem;">Clear</button>
-                </div>
+                <div class="section-title">IP Addresses (Shecan Mode)</div>
+                <textarea id="ip-list" class="input" rows="2" placeholder="One IP per line..."></textarea>
             </div>
             
-            <div class="stats-bar">
-                <div>Generated: <strong id="config-count">0</strong></div>
-                <div id="mode-text">Mode: IP + SNI</div>
-            </div>
-            
-            <div style="display:flex; gap:10px; margin-top:10px;">
-                <button onclick="generateConfigs()" class="btn btn-primary" style="flex:2; padding:16px; font-size:1rem;">⚡️ GENERATE CONFIGS</button>
-                <button onclick="generateBalancedJSON()" class="btn btn-secondary" style="flex:1; padding:16px; font-size:0.85rem;">JSON</button>
-            </div>
-            
-            <!-- Advanced Tools -->
-            <div class="section" style="margin-top:16px; border:1px dashed #444; padding:14px; border-radius:14px; background:#111;">
-                <div class="section-title" style="margin-bottom:10px; color:#888;">🔧 ADVANCED TOOLS (از نسخه‌های قبلی)</div>
-                
-                <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px;">
-                    <button onclick="renameConfigs('ww')" class="btn btn-secondary" style="padding:8px 12px; font-size:0.75rem;">ww</button>
-                    <button onclick="renameConfigs('iran')" class="btn btn-secondary" style="padding:8px 12px; font-size:0.75rem;">🇮🇷 ایران</button>
-                    <button onclick="renameConfigs('fast')" class="btn btn-secondary" style="padding:8px 12px; font-size:0.75rem;">🚀 Fast</button>
-                    <button onclick="renameConfigs('clean')" class="btn btn-secondary" style="padding:8px 12px; font-size:0.75rem;">Clean</button>
-                    <button onclick="dedupAndSort()" class="btn btn-secondary" style="padding:8px 12px; font-size:0.75rem;">Dedup + Sort</button>
-                    <button onclick="shuffleConfigs()" class="btn btn-secondary" style="padding:8px 12px; font-size:0.75rem;">🔀 Shuffle</button>
-                    <button onclick="extractNames()" class="btn btn-secondary" style="padding:8px 12px; font-size:0.75rem;">Extract Names</button>
-                </div>
+            <div style="display:flex; gap:8px; margin-top:8px;">
+                <button onclick="generateConfigs()" class="btn btn-primary" style="flex:2; padding:14px; font-size:0.95rem;">⚡️ GENERATE</button>
             </div>
             
             <div id="output-container" class="output">
                 <textarea id="result-area" readonly></textarea>
-                <div style="display:flex; gap:8px; margin-top:10px;">
-                    <button onclick="copyConfigs()" class="btn btn-primary" style="flex:1; padding:12px; font-size:0.9rem;">📋 COPY</button>
-                    <button onclick="downloadConfigs()" class="btn btn-secondary" style="flex:1; padding:12px; font-size:0.9rem;">⬇️ TXT</button>
-                    <button onclick="shareConfigs()" class="btn btn-secondary" style="flex:1; padding:12px; font-size:0.9rem;">🔗 SHARE</button>
+                <div style="display:flex; gap:6px; margin-top:8px;">
+                    <button onclick="copyConfigs()" class="btn btn-primary" style="flex:1; padding:10px; font-size:0.82rem;">📋 COPY</button>
+                    <button onclick="downloadConfigs()" class="btn btn-secondary" style="flex:1; padding:10px; font-size:0.82rem;">⬇️ TXT</button>
+                    <button onclick="shareConfigs()" class="btn btn-secondary" style="flex:1; padding:10px; font-size:0.82rem;">🔗 SHARE</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TAB 1: REPLACER -->
+        <div id="panel-replacer" style="display:none;">
+            <div class="section">
+                <div class="section-title">Target Netlify Domains</div>
+                <div id="repl-domain-container"></div>
+                <div style="display:flex; gap:6px; margin-top:6px;">
+                    <button onclick="addReplDomain()" class="btn btn-secondary" style="flex:1; padding:7px; font-size:0.75rem;">+ Add Domain</button>
+                    <button onclick="clearReplDomains()" class="btn btn-secondary" style="flex:1; padding:7px; font-size:0.75rem;">Clear All</button>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Old Configs (Ping Tested)</div>
+                <textarea id="old-configs" class="input" rows="5" placeholder="Paste your good configs here..."></textarea>
+            </div>
+            
+            <div style="display:flex; gap:8px; margin-top:10px;">
+                <button onclick="replaceAndDistribute()" class="btn btn-primary" style="flex:2; padding:13px; font-size:0.92rem;">🔄 REPLACE &amp; DISTRIBUTE</button>
+            </div>
+            
+            <div id="replacer-output" class="output" style="display:none;">
+                <textarea id="replacer-result" readonly></textarea>
+                <div style="display:flex; gap:6px; margin-top:8px;">
+                    <button onclick="copyReplacerResult()" class="btn btn-primary" style="flex:1; padding:10px; font-size:0.82rem;">📋 COPY</button>
+                    <button onclick="downloadReplacerResult()" class="btn btn-secondary" style="flex:1; padding:10px; font-size:0.82rem;">⬇️ TXT</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TAB 2: TOOLS -->
+        <div id="panel-tools" style="display:none;">
+            <div class="section">
+                <div class="section-title">Advanced Tools</div>
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap:6px; margin-bottom:12px;">
+                    <button onclick="renameConfigs('ww')" class="btn btn-secondary" style="padding:9px; font-size:0.78rem;">ww</button>
+                    <button onclick="renameConfigs('iran')" class="btn btn-secondary" style="padding:9px; font-size:0.78rem;">🇮🇷 IR</button>
+                    <button onclick="renameConfigs('fast')" class="btn btn-secondary" style="padding:9px; font-size:0.78rem;">🚀 Fast</button>
+                    <button onclick="renameConfigs('clean')" class="btn btn-secondary" style="padding:9px; font-size:0.78rem;">Clean</button>
+                    <button onclick="dedupAndSort()" class="btn btn-secondary" style="padding:9px; font-size:0.78rem;">Dedup + Sort</button>
+                    <button onclick="shuffleConfigs()" class="btn btn-secondary" style="padding:9px; font-size:0.78rem;">🔀 Shuffle</button>
+                    <button onclick="extractNames()" class="btn btn-secondary" style="padding:9px; font-size:0.78rem;">Extract Names</button>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Input Configs</div>
+                <textarea id="tools-input" class="input" rows="4" placeholder="Paste configs here..."></textarea>
+            </div>
+            
+            <div id="tools-output" class="output" style="display:none;">
+                <textarea id="tools-result" readonly></textarea>
+                <div style="display:flex; gap:6px; margin-top:8px;">
+                    <button onclick="copyToolsResult()" class="btn btn-primary" style="flex:1; padding:10px; font-size:0.82rem;">📋 COPY</button>
+                    <button onclick="downloadToolsResult()" class="btn btn-secondary" style="flex:1; padding:10px; font-size:0.82rem;">⬇️ TXT</button>
                 </div>
             </div>
         </div>
@@ -314,19 +317,14 @@
     <script>
         let netlifyMode = 'shecan';
         let configMode = 'default';
+        let genDomainIds = [];
+        let replDomainIds = [];
         
         const sniCategories = {
             all: ["helm.sh","blog.helm.sh","docs.helm.sh","kubernetes.io","kubectl.docs.kubernetes.io","kubebuilder.io","operatorframework.io","kind.sigs.k8s.io","kops.sigs.k8s.io","krew.sigs.k8s.io","kwok.sigs.k8s.io","kueue.sigs.k8s.io","jobset.sigs.k8s.io","kaniko.sigs.k8s.io","minikube.sigs.k8s.io","kustomize.sigs.k8s.io","cluster-api.sigs.k8s.io","descheduler.sigs.k8s.io","gateway-api.sigs.k8s.io","external-dns.sigs.k8s.io","service-apis.sigs.k8s.io","image-builder.sigs.k8s.io","metrics-server.sigs.k8s.io","scheduler-plugins.sigs.k8s.io","controller-runtime.sigs.k8s.io","prometheus-operator.sigs.k8s.io","node-feature-discovery.sigs.k8s.io","hierarchical-namespaces.sigs.k8s.io","secrets-store-csi-driver.sigs.k8s.io","security-profiles-operator.sigs.k8s.io","cluster-proportional-autoscaler.sigs.k8s.io","container.sigs.k8s.io","istio.io","cilium.io","linkerd.io","calico.org","rook.io","openebs.io","longhorn.io","fluxcd.io","argo-cd.readthedocs.io","tekton.dev","cert-manager.io","letsencrypt.org","keda.sh","crossplane.io","harbor.io"],
-            
             best: ["kubernetes.io","letsencrypt.org","kwok.sigs.k8s.io","kind.sigs.k8s.io","kueue.sigs.k8s.io","jobset.sigs.k8s.io","minikube.sigs.k8s.io","kustomize.sigs.k8s.io","cluster-api.sigs.k8s.io","gateway-api.sigs.k8s.io","image-builder.sigs.k8s.io","secrets-store-csi-driver.sigs.k8s.io","helm.sh","fluxcd.io"],
-            
             helm: ["helm.sh","blog.helm.sh","docs.helm.sh"],
-            k8s: ["kubernetes.io","kubectl.docs.kubernetes.io","kubebuilder.io","operatorframework.io"],
-            sigs: ["kind.sigs.k8s.io","kops.sigs.k8s.io","krew.sigs.k8s.io","kwok.sigs.k8s.io","kueue.sigs.k8s.io","jobset.sigs.k8s.io","kaniko.sigs.k8s.io","minikube.sigs.k8s.io","kustomize.sigs.k8s.io","cluster-api.sigs.k8s.io","descheduler.sigs.k8s.io","gateway-api.sigs.k8s.io","external-dns.sigs.k8s.io","service-apis.sigs.k8s.io","image-builder.sigs.k8s.io","metrics-server.sigs.k8s.io","scheduler-plugins.sigs.k8s.io","controller-runtime.sigs.k8s.io","prometheus-operator.sigs.k8s.io","node-feature-discovery.sigs.k8s.io","hierarchical-namespaces.sigs.k8s.io","secrets-store-csi-driver.sigs.k8s.io","security-profiles-operator.sigs.k8s.io","cluster-proportional-autoscaler.sigs.k8s.io","container.sigs.k8s.io"],
-            mesh: ["istio.io","cilium.io","linkerd.io","calico.org","gateway-api.sigs.k8s.io"],
-            storage: ["rook.io","openebs.io","longhorn.io"],
-            gitops: ["fluxcd.io","argo-cd.readthedocs.io","tekton.dev"],
-            security: ["cert-manager.io","letsencrypt.org","secrets-store-csi-driver.sigs.k8s.io","security-profiles-operator.sigs.k8s.io"]
+            k8s: ["kubernetes.io","kubectl.docs.kubernetes.io","kubebuilder.io","operatorframework.io"]
         };
         
         const defaultIps = [
@@ -341,7 +339,13 @@
         ];
         
         function switchTab(tab) {
-            // Simple single tab for now
+            document.getElementById('panel-generator').style.display = tab === 0 ? 'block' : 'none';
+            document.getElementById('panel-replacer').style.display = tab === 1 ? 'block' : 'none';
+            document.getElementById('panel-tools').style.display = tab === 2 ? 'block' : 'none';
+            
+            document.getElementById('tab0').classList.toggle('active', tab === 0);
+            document.getElementById('tab1').classList.toggle('active', tab === 1);
+            document.getElementById('tab2').classList.toggle('active', tab === 2);
         }
         
         function setNetlifyMode(mode) {
@@ -351,12 +355,10 @@
             document.getElementById('mode-normal').classList.toggle('btn-primary', mode === 'normal');
             document.getElementById('mode-normal').classList.toggle('btn-secondary', mode !== 'normal');
             document.getElementById('ip-section').style.display = mode === 'shecan' ? 'block' : 'none';
-            updateLiveStats();
         }
         
         function setConfigMode(mode) {
             configMode = mode;
-            document.getElementById('custom-settings').style.display = mode === 'custom' ? 'block' : 'none';
             document.getElementById('type-default').classList.toggle('btn-primary', mode === 'default');
             document.getElementById('type-default').classList.toggle('btn-secondary', mode !== 'default');
             document.getElementById('type-custom').classList.toggle('btn-primary', mode === 'custom');
@@ -364,63 +366,81 @@
         }
         
         function loadSniCategory(category, btn) {
-            const textarea = document.getElementById('domain-list');
-            textarea.value = sniCategories[category].join('\n');
-            updateLiveStats();
-            
-            // Remove active from all
-            document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('domain-list').value = sniCategories[category].join('\n');
+            document.querySelectorAll('#panel-generator .btn').forEach(b => b.classList.remove('active'));
             if (btn) btn.classList.add('active');
         }
         
         function loadDefaultIps() {
             document.getElementById('ip-list').value = defaultIps.join('\n');
-            updateLiveStats();
         }
         
-        function pasteToArea(id) {
-            navigator.clipboard.readText().then(text => {
-                const el = document.getElementById(id);
-                el.value = (el.value.trim() ? el.value + '\n' : '') + text.trim();
-                updateLiveStats();
-            }).catch(() => showToast("Clipboard denied", true));
+        // Generator multiple domains
+        function addGenDomain(value = '') {
+            const container = document.getElementById('gen-domain-container');
+            const id = 'gen-dom-' + Date.now();
+            const row = document.createElement('div');
+            row.className = 'domain-row';
+            row.innerHTML = `<input type="text" id="${id}" value="${value}" placeholder="your-project.netlify.app"><button onclick="removeGenDomain(this)" class="btn btn-secondary" style="padding:6px 10px; font-size:0.7rem;">✕</button>`;
+            container.appendChild(row);
+            genDomainIds.push(id);
         }
         
-        function updateLiveStats() {
-            const domains = document.getElementById('domain-list').value.trim().split('\n').filter(Boolean);
-            let count = domains.length;
-            if (netlifyMode === 'shecan') {
-                const ips = document.getElementById('ip-list').value.trim().split('\n').filter(Boolean);
-                count *= Math.max(ips.length, 1);
+        function removeGenDomain(btn) {
+            const row = btn.parentElement;
+            const input = row.querySelector('input');
+            if (input) {
+                const idx = genDomainIds.indexOf(input.id);
+                if (idx > -1) genDomainIds.splice(idx, 1);
             }
-            document.getElementById('config-count').textContent = count || 0;
-            document.getElementById('mode-text').textContent = `Mode: ${netlifyMode === 'shecan' ? 'IP + SNI' : 'Direct SNI'}`;
+            row.remove();
+        }
+        
+        function clearGenDomains() {
+            document.getElementById('gen-domain-container').innerHTML = '';
+            genDomainIds = [];
+        }
+        
+        function getGenDomains() {
+            const domains = [];
+            genDomainIds.forEach(id => {
+                const input = document.getElementById(id);
+                if (input && input.value.trim()) domains.push(input.value.trim());
+            });
+            return domains.length > 0 ? domains : ['example.netlify.app'];
         }
         
         function generateConfigs() {
-            const host = document.getElementById('main-host').value.trim() || "example.netlify.app";
+            const hosts = getGenDomains();
             const domains = document.getElementById('domain-list').value.trim().split('\n').filter(Boolean);
+            const ips = document.getElementById('ip-list').value.trim().split('\n').filter(Boolean);
             
-            if (!domains.length) { showToast("Please enter at least one SNI domain", true); return; }
+            if (!domains.length) { showToast("Please enter at least one SNI", true); return; }
             
             let uuid = "Telegram-Parsashonam";
             let path = "/p4r34m";
             
             if (configMode === 'custom') {
-                uuid = document.getElementById('custom-user').value.trim() || uuid;
-                path = document.getElementById('custom-path').value.trim() || path;
+                uuid = prompt("UUID:", uuid) || uuid;
+                path = prompt("Path:", path) || path;
             }
             
             let configs = [];
-            if (netlifyMode === 'shecan') {
-                const ips = document.getElementById('ip-list').value.trim().split('\n').filter(Boolean);
-                if (!ips.length) { showToast("Please enter at least one IP for Shecan mode", true); return; }
-                domains.forEach(sni => ips.forEach(ip => {
-                    configs.push(`vless://${uuid}@${ip}:443?encryption=none&security=tls&sni=${sni}&alpn=h2,http/1.1&insecure=1&type=xhttp&host=${host}&path=${path}#IR_NETLIFY_${sni}`);
-                }));
+            let hostIndex = 0;
+            
+            if (netlifyMode === 'shecan' && ips.length > 0) {
+                domains.forEach(sni => {
+                    ips.forEach(ip => {
+                        const host = hosts[hostIndex % hosts.length];
+                        configs.push(`vless://${uuid}@${ip}:443?encryption=none&security=tls&sni=${sni}&alpn=h2,http/1.1&insecure=1&type=xhttp&host=${host}&path=${path}#IR_NETLIFY_${sni}`);
+                        hostIndex++;
+                    });
+                });
             } else {
                 domains.forEach(sni => {
+                    const host = hosts[hostIndex % hosts.length];
                     configs.push(`vless://${uuid}@${sni}:443?encryption=none&security=tls&sni=${sni}&alpn=h2,http/1.1&type=xhttp&host=${host}&path=${path}#IR_NETLIFY_${sni}`);
+                    hostIndex++;
                 });
             }
             
@@ -429,109 +449,141 @@
             showToast(`✅ Generated ${configs.length} configs!`);
         }
         
-        function generateBalancedJSON() {
-            const text = document.getElementById('result-area').value;
-            if (!text) { showToast("ابتدا کانفیگ تولید کنید!", true); return; }
-            
-            const lines = text.trim().split('\n\n');
-            const json = {
-                version: "V10 Bachelor Edition",
-                total: lines.length,
-                configs: lines.map((line, i) => {
-                    const match = line.match(/#(.+)$/);
-                    return {
-                        id: i + 1,
-                        remark: match ? match[1] : `Config ${i+1}`,
-                        vless: line.split('#')[0]
-                    };
-                })
-            };
-            
-            const jsonStr = JSON.stringify(json, null, 2);
-            document.getElementById('result-area').value = jsonStr;
-            showToast("✅ Balanced JSON آماده شد!");
-        }
-        
-        function renameConfigs(preset) {
-            let text = document.getElementById('result-area').value;
-            if (!text) { showToast("ابتدا کانفیگ تولید کنید!", true); return; }
-            
-            let prefix = "";
-            switch(preset) {
-                case 'ww': prefix = "ww | "; break;
-                case 'iran': prefix = "🇮🇷 IR | "; break;
-                case 'fast': prefix = "🚀 FAST | "; break;
-                case 'clean': prefix = ""; break;
-            }
-            
-            const newText = text.split('\n\n').map(line => {
-                return line.replace(/#(.+)$/, `#${prefix}$1`);
-            }).join('\n\n');
-            
-            document.getElementById('result-area').value = newText;
-            showToast(`✅ ریمارک‌ها به ${preset.toUpperCase()} تغییر کرد`);
-        }
-        
-        function dedupAndSort() {
-            let text = document.getElementById('result-area').value;
-            if (!text) return;
-            
-            const lines = [...new Set(text.trim().split('\n\n'))]; // dedup
-            lines.sort(); // sort
-            document.getElementById('result-area').value = lines.join('\n\n');
-            showToast(`✅ تکراری‌ها حذف و مرتب شد (${lines.length} کانفیگ)`);
-        }
-        
-        function shuffleConfigs() {
-            let text = document.getElementById('result-area').value;
-            if (!text) return;
-            
-            let lines = text.trim().split('\n\n');
-            for (let i = lines.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [lines[i], lines[j]] = [lines[j], lines[i]];
-            }
-            document.getElementById('result-area').value = lines.join('\n\n');
-            showToast("✅ کانفیگ‌ها شافل شدند!");
-        }
-        
-        function extractNames() {
-            let text = document.getElementById('result-area').value;
-            if (!text) return;
-            
-            const names = text.match(/#(.+)/g) || [];
-            const cleanNames = names.map(n => n.replace('#', '').trim());
-            document.getElementById('result-area').value = cleanNames.join('\n');
-            showToast(`✅ ${cleanNames.length} نام استخراج شد`);
-        }
-        
-        function copyConfigs() {
-            navigator.clipboard.writeText(document.getElementById('result-area').value).then(() => showToast("📋 Copied!"));
-        }
-        
+        function copyConfigs() { navigator.clipboard.writeText(document.getElementById('result-area').value).then(() => showToast("📋 Copied!")); }
         function downloadConfigs() {
             const text = document.getElementById('result-area').value;
             const blob = new Blob([text], {type: "text/plain"});
             const url = URL.createObjectURL(blob);
             const a = document.createElement("a");
-            a.href = url; a.download = `IR_NETLIFY_V10_${Date.now()}.txt`; a.click();
+            a.href = url; a.download = `IR_NETLIFY_V10.2_${Date.now()}.txt`; a.click();
+            URL.revokeObjectURL(url);
+        }
+        function shareConfigs() {
+            const text = document.getElementById('result-area').value;
+            if (!text) return;
+            navigator.clipboard.writeText(`🔗 IR NETLIFY V10\n\n${text}`).then(() => showToast("🔗 Shared!"));
+        }
+        
+        // Replacer
+        function addReplDomain(value = '') {
+            const container = document.getElementById('repl-domain-container');
+            const id = 'repl-dom-' + Date.now();
+            const row = document.createElement('div');
+            row.className = 'domain-row';
+            row.innerHTML = `<input type="text" id="${id}" value="${value}" placeholder="new-project.netlify.app"><button onclick="removeReplDomain(this)" class="btn btn-secondary" style="padding:6px 10px; font-size:0.7rem;">✕</button>`;
+            container.appendChild(row);
+            replDomainIds.push(id);
+        }
+        
+        function removeReplDomain(btn) {
+            const row = btn.parentElement;
+            const input = row.querySelector('input');
+            if (input) {
+                const idx = replDomainIds.indexOf(input.id);
+                if (idx > -1) replDomainIds.splice(idx, 1);
+            }
+            row.remove();
+        }
+        
+        function clearReplDomains() {
+            document.getElementById('repl-domain-container').innerHTML = '';
+            replDomainIds = [];
+        }
+        
+        function getReplDomains() {
+            const domains = [];
+            replDomainIds.forEach(id => {
+                const input = document.getElementById(id);
+                if (input && input.value.trim()) domains.push(input.value.trim());
+            });
+            return domains;
+        }
+        
+        function replaceAndDistribute() {
+            const domains = getReplDomains();
+            const oldText = document.getElementById('old-configs').value.trim();
+            
+            if (domains.length === 0) { showToast("Add at least one domain", true); return; }
+            if (!oldText) { showToast("Paste old configs", true); return; }
+            
+            const lines = oldText.split('\n\n').filter(Boolean);
+            const newConfigs = [];
+            
+            lines.forEach((line, i) => {
+                const target = domains[i % domains.length];
+                newConfigs.push(line.replace(/host=([^&]+)/, `host=${target}`));
+            });
+            
+            document.getElementById('replacer-result').value = newConfigs.join('\n\n');
+            document.getElementById('replacer-output').style.display = 'block';
+            showToast(`✅ ${newConfigs.length} configs updated!`);
+        }
+        
+        function copyReplacerResult() { navigator.clipboard.writeText(document.getElementById('replacer-result').value).then(() => showToast("📋 Copied!")); }
+        function downloadReplacerResult() {
+            const text = document.getElementById('replacer-result').value;
+            const blob = new Blob([text], {type: "text/plain"});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url; a.download = `REPLACED_${Date.now()}.txt`; a.click();
             URL.revokeObjectURL(url);
         }
         
-        function shareConfigs() {
-            const text = document.getElementById('result-area').value;
-            if (!text) { showToast("ابتدا کانفیگ تولید کنید!", true); return; }
+        // Tools
+        function renameConfigs(preset) {
+            let text = document.getElementById('tools-input').value.trim();
+            if (!text) { showToast("Paste configs first", true); return; }
             
-            const shareText = `🔗 IR NETLIFY V10 BACHELOR EDITION\n\n${text}\n\n📌 Shared from: https://github.com/johncarterjourney-rgb/netlify-config-generator`;
+            let prefix = "";
+            if (preset === 'ww') prefix = "ww | ";
+            else if (preset === 'iran') prefix = "🇮🇷 IR | ";
+            else if (preset === 'fast') prefix = "🚀 FAST | ";
             
-            navigator.clipboard.writeText(shareText).then(() => {
-                showToast("🔗 لینک شیر آماده شد! (کپی شد)");
-            }).catch(() => {
-                // Fallback
-                const encoded = btoa(unescape(encodeURIComponent(text)));
-                const shareUrl = `${location.origin}${location.pathname}#configs=${encoded}`;
-                prompt("لینک شیر (کپی کنید):", shareUrl);
-            });
+            const newText = text.split('\n\n').map(line => line.replace(/#(.+)$/, `#${prefix}$1`)).join('\n\n');
+            document.getElementById('tools-result').value = newText;
+            document.getElementById('tools-output').style.display = 'block';
+            showToast(`✅ Renamed to ${preset}`);
+        }
+        
+        function dedupAndSort() {
+            let text = document.getElementById('tools-input').value.trim();
+            if (!text) return;
+            const lines = [...new Set(text.split('\n\n'))].sort();
+            document.getElementById('tools-result').value = lines.join('\n\n');
+            document.getElementById('tools-output').style.display = 'block';
+            showToast(`✅ Deduped & Sorted (${lines.length})`);
+        }
+        
+        function shuffleConfigs() {
+            let text = document.getElementById('tools-input').value.trim();
+            if (!text) return;
+            let lines = text.split('\n\n');
+            for (let i = lines.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [lines[i], lines[j]] = [lines[j], lines[i]];
+            }
+            document.getElementById('tools-result').value = lines.join('\n\n');
+            document.getElementById('tools-output').style.display = 'block';
+            showToast("✅ Shuffled!");
+        }
+        
+        function extractNames() {
+            let text = document.getElementById('tools-input').value.trim();
+            if (!text) return;
+            const names = (text.match(/#(.+)/g) || []).map(n => n.replace('#', '').trim());
+            document.getElementById('tools-result').value = names.join('\n');
+            document.getElementById('tools-output').style.display = 'block';
+            showToast(`✅ ${names.length} names extracted`);
+        }
+        
+        function copyToolsResult() { navigator.clipboard.writeText(document.getElementById('tools-result').value).then(() => showToast("📋 Copied!")); }
+        function downloadToolsResult() {
+            const text = document.getElementById('tools-result').value;
+            const blob = new Blob([text], {type: "text/plain"});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url; a.download = `TOOLS_${Date.now()}.txt`; a.click();
+            URL.revokeObjectURL(url);
         }
         
         function showToast(msg, error = false) {
@@ -539,20 +591,33 @@
             toast.textContent = msg;
             toast.style.color = error ? '#ff6b00' : '#ffffff';
             toast.style.display = 'flex';
-            setTimeout(() => toast.style.display = 'none', 2600);
+            setTimeout(() => toast.style.display = 'none', 2400);
         }
         
         function init() {
             setNetlifyMode('shecan');
             setConfigMode('default');
-            loadSniCategory('all', document.querySelector('.category-btn.all'));
-            loadDefaultIps();
             
-            ['domain-list', 'ip-list'].forEach(id => {
-                document.getElementById(id).addEventListener('input', updateLiveStats);
-            });
+            // Init generator domains (2 fields)
+            const genContainer = document.getElementById('gen-domain-container');
+            genContainer.innerHTML = '';
+            genDomainIds = [];
+            for (let i = 0; i < 2; i++) addGenDomain();
             
-            updateLiveStats();
+            // Init replacer domains (3 fields)
+            const replContainer = document.getElementById('repl-domain-container');
+            replContainer.innerHTML = '';
+            replDomainIds = [];
+            for (let i = 0; i < 3; i++) addReplDomain();
+            
+            // Default SNI
+            document.getElementById('domain-list').value = sniCategories.best.join('\n');
+            document.getElementById('ip-list').value = defaultIps.join('\n');
+            
+            // Show generator by default
+            document.getElementById('panel-generator').style.display = 'block';
+            document.getElementById('panel-replacer').style.display = 'none';
+            document.getElementById('panel-tools').style.display = 'none';
         }
         
         window.onload = init;
