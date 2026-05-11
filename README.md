@@ -50,4 +50,6 @@ No installation required! The tool runs 100% in your browser.
 
 * Base concept & databases: **@ArchiveTell**
 * Advanced UI & Core Logic: **Bachelor⚡️**
+* Special Thanks: **[IR-NETLIFY](https://github.com/IR-NETLIFY)** for inspiration and prior versions.
+
 * License: MIT - Free for community use.
