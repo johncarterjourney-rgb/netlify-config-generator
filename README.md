@@ -1,105 +1,53 @@
-# netlify-config-generator
+# 🚀 IR NETLIFY V10.3 • ULTIMATE BACHELOR EDITION
 
-**IR NETLIFY V10.2 • BACHELOR EDITION ⚡️**
+[![Version](https://img.shields.io/badge/Version-V10.3-00ff9d.svg)](#)
+[![Channel](https://img.shields.io/badge/Telegram-@ArchiveTell-00e1ff.svg)](https://t.me/archivetell)
+[![Developer](https://img.shields.io/badge/Developer-Bachelor⚡️-ff9100.svg)](#)
 
-**Powerful VLESS Config Generator for Netlify** — BACHELOR EDITION • 3 Tabs • Multiple Domains • Advanced Tools
-
-> یک ابزار قدرتمند و سبک برای تولید کانفیگ‌های باکیفیت VLESS + xhttp بهینه‌شده برای نتلیفای، با دسته‌بندی هوشمند دامنه‌های SNI.
-
-![Version](https://img.shields.io/badge/Version-10.2-brightgreen)
-![UI](https://img.shields.io/badge/UI-English_%26_Clean-black)
-![Tabs](https://img.shields.io/badge/Tabs-3-blue)
+A powerful, client-side VLESS Config Generator optimized for Netlify/Vercel relays. 
+**V10.3 Ultimate Edition** features a stunning Cyberpunk UI, live domain checking, and advanced config manipulation tools.
 
 ---
 
-## ✨ Features
+## ✨ What's New in V10.3
+
+* ⚡ **Live Domain Checker API:** Verify if your Netlify domains are active and healthy directly from the UI using our custom Cloudflare Worker API.
+* 🎨 **Cyberpunk Glassmorphism UI:** A completely redesigned dark mode interface with neon accents, glowing effects, and responsive modals.
+* 🌍 **100% English Interface:** Standardized for global community use.
+* ℹ️ **Interactive Tooltips:** Click any `?` icon to learn how specific features or modes work.
+
+---
+
+## 🔥 Core Features
 
 ### ⚡ Generator Tab
-- Multiple Netlify Domains (add as many as you want)
-- IP + SNI (Shecan) & Direct SNI modes
-- Smart SNI categories (ALL, BEST, Helm, K8s...)
+* **IP + SNI (Shecan) Mode:** Bypass strict DPI by combining premium IPs with functional SNIs.
+* **Direct SNI Mode:** For standard relay connections.
+* **Smart Databases:** Built-in lists for `Best` and `All` CNCF/Cloud-native SNIs, plus premium Cloudflare IPs.
+* **Multiple Domains:** Add as many Netlify domains as you want; the tool will distribute configs across them evenly.
 
 ### 🔄 Replacer Tab
-- Replace old Netlify domain with new ones
-- Support for **multiple target domains**
-- Auto distribution (round-robin)
+* Got old, working configs but your Netlify domain got blocked? Paste them here, add your new domains, and instantly swap the hosts without losing your UUIDs or IPs.
 
 ### 🔧 Tools Tab
-- Rename Presets: ww | 🇮🇷 IR | 🚀 Fast | Clean
-- Dedup + Sort
-- Shuffle
-- Extract Names only
-  - استخراج نام کانفیگ‌ها
-- **📦 خروجی Balanced JSON** برای Xray و Sing-box
-- **🔗 لینک اشتراکی** — کانفیگ خود را برای دیگران بفرستید
-- **📱 کاملاً ریسپانسیو** و بدون نیاز به اینترنت (فایل تک‌صفحه‌ای)
+* **Rename Presets:** Instantly tag your configs with `ww |`, `🇮🇷 IR |`, `🚀 Fast |`, or strip tags completely.
+* **Dedup + Sort:** Remove duplicate configs and organize them alphabetically.
+* **Shuffle:** Randomize config order for better load balancing in V2Ray clients.
+* **Extract Names:** Pull out only the remarks/names of the configs for easy sharing.
 
 ---
 
-## 🚀 How to Use
+## 🚀 How to Use (Live Demo)
 
-1. Open `index.html` in any modern browser
-2. **Generator Tab**: Add multiple Netlify domains + generate configs
-3. **Replacer Tab**: Paste old configs + replace with new domains
-4. **Tools Tab**: Clean, rename, shuffle or extract names
-5. Copy or download your final configs
+No installation required! The tool runs 100% in your browser.
+👉 **[CLICK HERE FOR LIVE DEMO](https://johncarterjourney-rgb.github.io/netlify-config-generator/)**
 
-**Pro Tip**: Use multiple Netlify domains in Generator for better load distribution!
+*Tip: For maximum stability, use the `IP + SNI` mode with multiple Netlify domains.*
 
 ---
 
-## 📁 ساختار پروژه / Project Structure
+## 🙏 Credits & License
 
-```
-index.html   ← ابزار اصلی (دمو آنلاین آماده)
-README.md    ← این فایل
-```
-
----
-
-## 🛠️ تکنولوژی‌ها / Tech Stack
-
-- HTML + CSS + JavaScript خالص (بدون وابستگی خارجی)
-- کاملاً آفلاین
-- دو زبانه (فارسی + انگلیسی)
-
----
-
-## 📸 پیش‌نمایش / Preview
-
-**تم سیاه و سفید سبک Grok**
-
-- رابط کاربری مینیمال و تمیز
-- کنتراست بالا
-- ظاهر حرفه‌ای
-- سریع و سبک
-
-### دمو آنلاین / Live Demo
-
-🔗 **[مشاهده دمو آنلاین](https://johncarterjourney-rgb.github.io/netlify-config-generator/)**
-
-(با GitHub Pages میزبانی می‌شود)
-
----
-
-## 🙏 اعتبار / Credits
-
-- ایده اولیه و لیست دامنه‌ها: **@archivetell**
-- طراحی رابط کاربری و دسته‌بندی: سبک مینیمال Grok
-- ساخته شده برای جامعه پروکسی ایران
-
----
-
-## 📜 لایسنس / License
-
-لایسنس MIT — رایگان برای استفاده و تغییر.
-
----
-
-**If this tool was useful for you, please give the repo a ⭐ star!**
-
-Made with ❤️ for the community. ⚡️
-
----
-
-> **Note**: This tool is for personal & educational use only. Please respect service providers' terms.
+* Base concept & databases: **@ArchiveTell**
+* Advanced UI & Core Logic: **Bachelor⚡️**
+* License: MIT - Free for community use.
